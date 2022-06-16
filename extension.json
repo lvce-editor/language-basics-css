@@ -1,0 +1,12 @@
+{
+  "id": "builtin.language-basics-css",
+  "name": "Language Basics CSS",
+  "description": "Provides syntax highlighting and bracket matching in CSS files.",
+  "languages": [
+    {
+      "id": "css",
+      "extensions": [".css"],
+      "tokenize": "src/tokenizeCss.js"
+    }
+  ]
+}

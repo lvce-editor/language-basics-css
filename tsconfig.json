@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "lib": ["esnext", "WebWorker"],
+    "checkJs": true,
+    "module": "esnext",
+    "target": "esnext",
+    "types": ["jest"],
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "strict": true
+  },
+  "include": ["src", "test"]
+}
