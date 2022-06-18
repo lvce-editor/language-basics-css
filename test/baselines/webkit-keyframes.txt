@@ -1,0 +1,6 @@
+Query
+Whitespace
+Text
+Whitespace
+Punctuation
+Punctuation

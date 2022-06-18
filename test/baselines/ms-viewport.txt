@@ -1,0 +1,12 @@
+Query
+Whitespace
+Punctuation
+NewLine
+Whitespace
+CssPropertyName
+Punctuation
+Whitespace
+CssPropertyValue
+Punctuation
+NewLine
+Punctuation
