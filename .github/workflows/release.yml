@@ -52,7 +52,7 @@ jobs:
       - name: Build archive
         shell: bash
         run: |
-          staging="language-basics-NAME-${{ needs.create-release.outputs.rg_version }}"
+          staging="language-basics-css-${{ needs.create-release.outputs.rg_version }}"
           mv "extension.tar.br" "$staging.tar.br"
           echo "ASSET=$staging.tar.br" >> $GITHUB_ENV
 
