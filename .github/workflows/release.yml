@@ -8,7 +8,7 @@ on:
 jobs:
   create-release:
     name: create-release
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     outputs:
       upload_url: ${{ steps.release.outputs.upload_url }}
       rg_version: ${{ env.RG_VERSION }}
@@ -31,7 +31,7 @@ jobs:
   build-release:
     name: build-release
     needs: ['create-release']
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
