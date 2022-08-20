@@ -3,4 +3,4 @@ image:
 
 tasks:
   - init: npm ci
-    command: npm test
+    command: npm run dev
