@@ -358,10 +358,7 @@ export const tokenizeLine = (line, lineState) => {
     }
     const tokenLength = next[0].length
     index += tokenLength
-    tokens.push({
-      type: token,
-      length: tokenLength,
-    })
+    tokens.push(token, tokenLength)
   }
   return {
     state,
