@@ -83,7 +83,7 @@ const RE_COLON = /^:/
 const RE_PROPERTY_VALUE = /^[^;\}]+/
 const RE_SEMICOLON = /^;/
 const RE_COMMA = /^,/
-const RE_ANYTHING = /^.*/
+const RE_ANYTHING = /^.+/s
 const RE_NUMERIC = /^(([0-9]+\.?[0-9]*)|(\.[0-9]+))/
 const RE_ANYTHING_UNTIL_CLOSE_BRACE = /^[^\}]+/
 const RE_BLOCK_COMMENT_START = /^\/\*/
@@ -200,7 +200,6 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.Unknown
           state = State.TopLevelContent
         } else {
-          tokens.map((x) => TokenMap[x.type]) //?
           part //?
           throw new Error('no')
         }
