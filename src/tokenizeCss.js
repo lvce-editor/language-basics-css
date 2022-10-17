@@ -73,7 +73,7 @@ export const TokenMap = {
   [TokenType.CssSelectorId]: 'CssSelectorId',
 }
 
-const RE_SELECTOR = /^[\.a-zA-Z\d\-\:>\+\~]+/
+const RE_SELECTOR = /^[\.a-zA-Z\d\-\:>\+\~\_]+/
 const RE_SELECTOR_ID = /^#\w+/
 const RE_WHITESPACE = /^ +/
 const RE_CURLY_OPEN = /^\{/
