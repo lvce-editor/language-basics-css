@@ -1,4 +1,4 @@
-Query
+CssAtRule
 Whitespace
 Text
 Punctuation

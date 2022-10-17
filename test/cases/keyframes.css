@@ -1,0 +1,4 @@
+@keyframes blink-ace-animate {
+from, to { opacity: 1; }
+60% { opacity: 0; }
+}
