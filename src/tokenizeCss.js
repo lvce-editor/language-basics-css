@@ -75,7 +75,7 @@ export const TokenMap = {
 }
 
 const RE_SELECTOR = /^[\.a-zA-Z\d\-\:>\+\~\_%]+/
-const RE_SELECTOR_ID = /^#\w+/
+const RE_SELECTOR_ID = /^#[\w\-\_]+/
 const RE_WHITESPACE = /^ +/
 const RE_CURLY_OPEN = /^\{/
 const RE_CURLY_CLOSE = /^\}/
