@@ -190,6 +190,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_SELECTOR))) {
           token = TokenType.CssSelector
           state = State.AfterSelector
+        } else if ((next = part.match(RE_SELECTOR_ID))) {
+          token = TokenType.CssSelectorId
+          state = State.AfterSelector
         } else if ((next = part.match(RE_COMMA))) {
           token = TokenType.Punctuation
           state = State.AfterSelector
