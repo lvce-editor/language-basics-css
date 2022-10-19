@@ -36,7 +36,7 @@ jobs:
       - name: Build static site
         run: node scripts/build-static.js
         env:
-          PATH_PREFIX: /language-basics-css
+          PATH_PREFIX: auto
       - name: Upload artifact
         if: matrix.os == 'ubuntu-22.04'
         uses: actions/upload-pages-artifact@v1
