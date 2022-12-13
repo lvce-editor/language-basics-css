@@ -105,6 +105,7 @@ const RE_QUERY_NAME = /^[a-z\-]+/
 const RE_QUERY_CONTENT = /^[^\)]+/
 const RE_COMBINATOR = /^[\+\>\~]/
 const RE_FUNCTION = /^[a-zA-Z]+(?=\()/
+const RE_VARIABLE_NAME = /^\-\-[a-zA-Z\w]+/
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -390,6 +391,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_SEMICOLON))) {
           token = TokenType.Punctuation
           state = State.AfterPropertyValue
+        } else if ((next = part.match(RE_VARIABLE_NAME))) {
+          token = TokenType.Variable
+          state = State.AfterFunctionName
         } else {
           throw new Error('no')
         }
