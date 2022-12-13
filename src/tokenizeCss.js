@@ -15,6 +15,7 @@ export const State = {
   InsideRound: 11,
   AfterQueryWithRules: 12,
   InsideRule: 13,
+  AfterFunctionName: 14,
 }
 
 export const StateMap = {
@@ -49,6 +50,7 @@ export const TokenType = {
   Query: 886,
   Text: 887,
   CssSelectorId: 889,
+  FuntionName: 890,
 }
 
 export const TokenMap = {
@@ -72,6 +74,7 @@ export const TokenMap = {
   [TokenType.Query]: 'CssAtRule',
   [TokenType.Text]: 'Text',
   [TokenType.CssSelectorId]: 'CssSelectorId',
+  [TokenType.FuntionName]: 'Function',
 }
 
 const RE_SELECTOR = /^[\.a-zA-Z\d\-\:>\+\~\_%]+/
@@ -101,6 +104,7 @@ const RE_STAR = /^\*/
 const RE_QUERY_NAME = /^[a-z\-]+/
 const RE_QUERY_CONTENT = /^[^\)]+/
 const RE_COMBINATOR = /^[\+\>\~]/
+const RE_FUNCTION = /^[a-zA-Z]+(?=\()/
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -303,6 +307,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_NUMERIC))) {
           token = TokenType.Numeric
           state = State.AfterPropertyValue
+        } else if ((next = part.match(RE_FUNCTION))) {
+          token = TokenType.FuntionName
+          state = State.AfterFunctionName
         } else if ((next = part.match(RE_PROPERTY_VALUE))) {
           token = TokenType.CssPropertyValue
           state = State.AfterPropertyValue
@@ -363,6 +370,26 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_SQUARE_CLOSE))) {
           token = TokenType.Punctuation
           state = State.AfterSelector
+        } else {
+          throw new Error('no')
+        }
+        break
+      case State.AfterFunctionName:
+        if ((next = part.match(RE_ROUND_OPEN))) {
+          token = TokenType.Punctuation
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_NUMERIC))) {
+          token = TokenType.Numeric
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_WHITESPACE))) {
+          token = TokenType.Whitespace
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_ROUND_CLOSE))) {
+          token = TokenType.Punctuation
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_SEMICOLON))) {
+          token = TokenType.Punctuation
+          state = State.AfterPropertyValue
         } else {
           throw new Error('no')
         }
