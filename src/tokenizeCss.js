@@ -105,7 +105,7 @@ const RE_QUERY_NAME = /^[a-z\-]+/
 const RE_QUERY_CONTENT = /^[^\)]+/
 const RE_COMBINATOR = /^[\+\>\~]/
 const RE_FUNCTION = /^[a-zA-Z]+(?=\()/
-const RE_VARIABLE_NAME = /^\-\-[a-zA-Z\w]+/
+const RE_VARIABLE_NAME = /^\-\-[a-zA-Z\w\-\_]+/
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -391,10 +391,14 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_SEMICOLON))) {
           token = TokenType.Punctuation
           state = State.AfterPropertyValue
+        } else if ((next = part.match(RE_COMMA))) {
+          token = TokenType.Punctuation
+          state = State.AfterFunctionName
         } else if ((next = part.match(RE_VARIABLE_NAME))) {
           token = TokenType.Variable
           state = State.AfterFunctionName
         } else {
+          part
           throw new Error('no')
         }
         break
@@ -416,3 +420,8 @@ export const tokenizeLine = (line, lineState) => {
 // TODO test :hover, :after, :before, ::first-letter
 
 // TODO test complex background image url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23b64e4e'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")
+
+// tokenizeLine(
+//   `body{--arrow-down: polygon(0 0, 100% 0, 50% 100%);`,
+//   initialLineState
+// ) //?
