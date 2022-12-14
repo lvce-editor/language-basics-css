@@ -222,7 +222,6 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.CssSelector
           state = State.AfterSelector
         } else if ((next = part.match(RE_ANYTHING))) {
-          console.log({ part })
           token = TokenType.Unknown
           state = State.TopLevelContent
         } else {
@@ -245,6 +244,9 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.Punctuation
           state = State.InsideRound
           stack.push(State.AfterQuery)
+        } else if ((next = part.match(RE_COMMA))) {
+          token = TokenType.Punctuation
+          state = State.AfterQuery
         } else {
           part
           throw new Error('no')
