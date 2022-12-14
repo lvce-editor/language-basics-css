@@ -1,0 +1,8 @@
+@keyframes monaco-findInput-highlight-0 {
+  0% {
+    background: rgba(253, 255, 0, 0.8);
+  }
+  to {
+    background: transparent;
+  }
+}
