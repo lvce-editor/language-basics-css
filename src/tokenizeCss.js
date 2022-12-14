@@ -106,7 +106,7 @@ const RE_SQUARE_CLOSE = /^\]/
 const RE_ATTRIBUTE_SELECTOR_CONTENT = /^[^\]]+/
 const RE_QUERY = /^@[a-z\-]+/
 const RE_STAR = /^\*/
-const RE_QUERY_NAME = /^[a-z\-]+/
+const RE_QUERY_NAME = /^[a-zA-Z\w\-\d\_]+/
 const RE_QUERY_CONTENT = /^[^\)]+/
 const RE_COMBINATOR = /^[\+\>\~]/
 const RE_FUNCTION = /^[a-zA-Z][a-zA-Z\-]+(?=\()/
