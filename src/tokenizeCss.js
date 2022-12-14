@@ -16,6 +16,8 @@ export const State = {
   AfterQueryWithRules: 12,
   InsideRule: 13,
   AfterFunctionName: 14,
+  InsideDoubleQuoteString: 15,
+  InsideSingleQuoteString: 16,
 }
 
 export const StateMap = {
@@ -51,6 +53,7 @@ export const TokenType = {
   Text: 887,
   CssSelectorId: 889,
   FuntionName: 890,
+  String: 891,
 }
 
 export const TokenMap = {
@@ -75,6 +78,7 @@ export const TokenMap = {
   [TokenType.Text]: 'Text',
   [TokenType.CssSelectorId]: 'CssSelectorId',
   [TokenType.FuntionName]: 'Function',
+  [TokenType.String]: 'String',
 }
 
 const RE_SELECTOR = /^[\.a-zA-Z\d\-\:>\+\~\_%]+/
@@ -85,6 +89,7 @@ const RE_CURLY_CLOSE = /^\}/
 const RE_PROPERTY_NAME = /^[a-zA-Z\-]+\b/
 const RE_COLON = /^:/
 const RE_PROPERTY_VALUE = /^[^;\}]+/
+const RE_PROPERTY_VALUE_SHORT = /^[^;\}\s\)]+/
 const RE_SEMICOLON = /^;/
 const RE_COMMA = /^,/
 const RE_ANYTHING = /^.+/s
@@ -104,7 +109,14 @@ const RE_STAR = /^\*/
 const RE_QUERY_NAME = /^[a-z\-]+/
 const RE_QUERY_CONTENT = /^[^\)]+/
 const RE_COMBINATOR = /^[\+\>\~]/
-const RE_FUNCTION = /^[a-zA-Z]+(?=\()/
+const RE_FUNCTION = /^[a-zA-Z][a-zA-Z\-]+(?=\()/
+const RE_VARIABLE_NAME = /^\-\-[a-zA-Z\w\-\_]+/
+const RE_PERCENT = /^\%/
+const RE_OPERATOR = /^[\-\/\*\+]/
+const RE_DOUBLE_QUOTE = /^"/
+const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"]+/
+const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^']+/
+const RE_SINGLE_QUOTE = /^'/
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -389,7 +401,53 @@ export const tokenizeLine = (line, lineState) => {
           state = State.AfterFunctionName
         } else if ((next = part.match(RE_SEMICOLON))) {
           token = TokenType.Punctuation
-          state = State.AfterPropertyValue
+          state = State.InsideSelector
+        } else if ((next = part.match(RE_COMMA))) {
+          token = TokenType.Punctuation
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_FUNCTION))) {
+          token = TokenType.FuntionName
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_VARIABLE_NAME))) {
+          token = TokenType.Variable
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_PERCENT))) {
+          token = TokenType.CssPropertyValue
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_DOUBLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = State.InsideDoubleQuoteString
+          stack.push(State.AfterFunctionName)
+        } else if ((next = part.match(RE_SINGLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = State.InsideSingleQuoteString
+          stack.push(State.AfterFunctionName)
+        } else if ((next = part.match(RE_PROPERTY_VALUE_SHORT))) {
+          token = TokenType.CssPropertyValue
+          state = State.AfterFunctionName
+        } else {
+          part
+          throw new Error('no')
+        }
+        break
+      case State.InsideDoubleQuoteString:
+        if ((next = part.match(RE_DOUBLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = stack.pop() || State.TopLevelContent
+        } else if ((next = part.match(RE_STRING_DOUBLE_QUOTE_CONTENT))) {
+          token = TokenType.String
+          state = State.InsideDoubleQuoteString
+        } else {
+          throw new Error('no')
+        }
+        break
+      case State.InsideSingleQuoteString:
+        if ((next = part.match(RE_SINGLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = stack.pop() || State.TopLevelContent
+        } else if ((next = part.match(RE_STRING_SINGLE_QUOTE_CONTENT))) {
+          token = TokenType.String
+          state = State.InsideSingleQuoteString
         } else {
           throw new Error('no')
         }

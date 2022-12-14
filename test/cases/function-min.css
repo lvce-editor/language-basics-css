@@ -1,0 +1,3 @@
+body {
+  max-width: min(300l, 100% - 4px);
+}
