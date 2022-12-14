@@ -18,6 +18,7 @@ export const State = {
   AfterFunctionName: 14,
   InsideDoubleQuoteString: 15,
   InsideSingleQuoteString: 16,
+  AfterFunctionNameInsideArguments: 17,
 }
 
 export const StateMap = {
@@ -90,6 +91,7 @@ const RE_PROPERTY_NAME = /^[a-zA-Z\-]+\b/
 const RE_COLON = /^:/
 const RE_PROPERTY_VALUE = /^[^;\}]+/
 const RE_PROPERTY_VALUE_SHORT = /^[^;\}\s\)]+/
+const RE_PROPERTY_VALUE_INSIDE_FUNCTION = /^[^\}\s\)]+/
 const RE_SEMICOLON = /^;/
 const RE_COMMA = /^,/
 const RE_ANYTHING = /^.+/s
@@ -398,7 +400,7 @@ export const tokenizeLine = (line, lineState) => {
       case State.AfterFunctionName:
         if ((next = part.match(RE_ROUND_OPEN))) {
           token = TokenType.Punctuation
-          state = State.AfterFunctionName
+          state = State.AfterFunctionNameInsideArguments
         } else if ((next = part.match(RE_NUMERIC))) {
           token = TokenType.Numeric
           state = State.AfterFunctionName
@@ -432,6 +434,50 @@ export const tokenizeLine = (line, lineState) => {
           state = State.InsideSingleQuoteString
           stack.push(State.AfterFunctionName)
         } else if ((next = part.match(RE_PROPERTY_VALUE_SHORT))) {
+          token = TokenType.CssPropertyValue
+          state = State.AfterFunctionName
+        } else {
+          part
+          throw new Error('no')
+        }
+        break
+      case State.AfterFunctionNameInsideArguments:
+        if ((next = part.match(RE_ROUND_OPEN))) {
+          token = TokenType.Punctuation
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_NUMERIC))) {
+          token = TokenType.Numeric
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_WHITESPACE))) {
+          token = TokenType.Whitespace
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_ROUND_CLOSE))) {
+          token = TokenType.Punctuation
+          state = State.AfterFunctionNameInsideArguments
+        } else if ((next = part.match(RE_SEMICOLON))) {
+          token = TokenType.Punctuation
+          state = State.InsideSelector
+        } else if ((next = part.match(RE_COMMA))) {
+          token = TokenType.Punctuation
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_FUNCTION))) {
+          token = TokenType.FuntionName
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_VARIABLE_NAME))) {
+          token = TokenType.Variable
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_PERCENT))) {
+          token = TokenType.CssPropertyValue
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_DOUBLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = State.InsideDoubleQuoteString
+          stack.push(State.AfterFunctionName)
+        } else if ((next = part.match(RE_SINGLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = State.InsideSingleQuoteString
+          stack.push(State.AfterFunctionName)
+        } else if ((next = part.match(RE_PROPERTY_VALUE_INSIDE_FUNCTION))) {
           token = TokenType.CssPropertyValue
           state = State.AfterFunctionName
         } else {
