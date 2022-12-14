@@ -16,6 +16,8 @@ export const State = {
   AfterQueryWithRules: 12,
   InsideRule: 13,
   AfterFunctionName: 14,
+  InsideDoubleQuoteString: 15,
+  InsideSingleQuoteString: 16,
 }
 
 export const StateMap = {
@@ -51,6 +53,7 @@ export const TokenType = {
   Text: 887,
   CssSelectorId: 889,
   FuntionName: 890,
+  String: 891,
 }
 
 export const TokenMap = {
@@ -75,6 +78,7 @@ export const TokenMap = {
   [TokenType.Text]: 'Text',
   [TokenType.CssSelectorId]: 'CssSelectorId',
   [TokenType.FuntionName]: 'Function',
+  [TokenType.String]: 'String',
 }
 
 const RE_SELECTOR = /^[\.a-zA-Z\d\-\:>\+\~\_%]+/
@@ -85,6 +89,7 @@ const RE_CURLY_CLOSE = /^\}/
 const RE_PROPERTY_NAME = /^[a-zA-Z\-]+\b/
 const RE_COLON = /^:/
 const RE_PROPERTY_VALUE = /^[^;\}]+/
+const RE_PROPERTY_VALUE_SHORT = /^[^;\}\s\)]+/
 const RE_SEMICOLON = /^;/
 const RE_COMMA = /^,/
 const RE_ANYTHING = /^.+/s
@@ -104,8 +109,14 @@ const RE_STAR = /^\*/
 const RE_QUERY_NAME = /^[a-z\-]+/
 const RE_QUERY_CONTENT = /^[^\)]+/
 const RE_COMBINATOR = /^[\+\>\~]/
-const RE_FUNCTION = /^[a-zA-Z]+(?=\()/
+const RE_FUNCTION = /^[a-zA-Z][a-zA-Z\-]+(?=\()/
 const RE_VARIABLE_NAME = /^\-\-[a-zA-Z\w\-\_]+/
+const RE_PERCENT = /^\%/
+const RE_OPERATOR = /^[\-\/\*\+]/
+const RE_DOUBLE_QUOTE = /^"/
+const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"]+/
+const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^']+/
+const RE_SINGLE_QUOTE = /^'/
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -390,15 +401,54 @@ export const tokenizeLine = (line, lineState) => {
           state = State.AfterFunctionName
         } else if ((next = part.match(RE_SEMICOLON))) {
           token = TokenType.Punctuation
-          state = State.AfterPropertyValue
+          state = State.InsideSelector
         } else if ((next = part.match(RE_COMMA))) {
           token = TokenType.Punctuation
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_FUNCTION))) {
+          token = TokenType.FuntionName
           state = State.AfterFunctionName
         } else if ((next = part.match(RE_VARIABLE_NAME))) {
           token = TokenType.Variable
           state = State.AfterFunctionName
+        } else if ((next = part.match(RE_PERCENT))) {
+          token = TokenType.CssPropertyValue
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_DOUBLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = State.InsideDoubleQuoteString
+          stack.push(State.AfterFunctionName)
+        } else if ((next = part.match(RE_SINGLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = State.InsideSingleQuoteString
+          stack.push(State.AfterFunctionName)
+        } else if ((next = part.match(RE_PROPERTY_VALUE_SHORT))) {
+          token = TokenType.CssPropertyValue
+          state = State.AfterFunctionName
         } else {
           part
+          throw new Error('no')
+        }
+        break
+      case State.InsideDoubleQuoteString:
+        if ((next = part.match(RE_DOUBLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = stack.pop() || State.TopLevelContent
+        } else if ((next = part.match(RE_STRING_DOUBLE_QUOTE_CONTENT))) {
+          token = TokenType.String
+          state = State.InsideDoubleQuoteString
+        } else {
+          throw new Error('no')
+        }
+        break
+      case State.InsideSingleQuoteString:
+        if ((next = part.match(RE_SINGLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = stack.pop() || State.TopLevelContent
+        } else if ((next = part.match(RE_STRING_SINGLE_QUOTE_CONTENT))) {
+          token = TokenType.String
+          state = State.InsideSingleQuoteString
+        } else {
           throw new Error('no')
         }
         break
@@ -420,8 +470,3 @@ export const tokenizeLine = (line, lineState) => {
 // TODO test :hover, :after, :before, ::first-letter
 
 // TODO test complex background image url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23b64e4e'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")
-
-// tokenizeLine(
-//   `body{--arrow-down: polygon(0 0, 100% 0, 50% 100%);`,
-//   initialLineState
-// ) //?
