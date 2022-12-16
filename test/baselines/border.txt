@@ -1,4 +1,4 @@
-CssAtRule
+CssSelector
 Whitespace
 Punctuation
 NewLine
@@ -6,9 +6,15 @@ Whitespace
 CssPropertyName
 Punctuation
 Whitespace
+Numeric
 CssPropertyValue
 Whitespace
 CssPropertyValue
+Whitespace
+Function
+Punctuation
+VariableName
+Punctuation
 Punctuation
 NewLine
 Punctuation

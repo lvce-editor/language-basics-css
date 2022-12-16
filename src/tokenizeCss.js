@@ -7,7 +7,6 @@ export const State = {
   InsideSelector: 3,
   AfterPropertyName: 4,
   AfterPropertyNameAfterColon: 5,
-  AfterPropertyValue: 6,
   InsideBlockComment: 7,
   InsidePseudoSelector: 8,
   InsideAttributeSelector: 9,
@@ -27,7 +26,6 @@ export const StateMap = {
   [State.InsideSelector]: 'InsideSelector',
   [State.AfterPropertyName]: 'AfterPropertyName',
   [State.AfterPropertyNameAfterColon]: 'AfterPropertyNameAfterColon',
-  [State.AfterPropertyValue]: 'AfterPropertyValue',
 }
 
 /**
@@ -326,41 +324,27 @@ export const tokenizeLine = (line, lineState) => {
           state = State.AfterPropertyNameAfterColon
         } else if ((next = part.match(RE_NUMERIC))) {
           token = TokenType.Numeric
-          state = State.AfterPropertyValue
+          state = State.AfterPropertyNameAfterColon
         } else if ((next = part.match(RE_FUNCTION))) {
           token = TokenType.FuntionName
           state = State.AfterFunctionName
-        } else if ((next = part.match(RE_PROPERTY_VALUE))) {
+        } else if ((next = part.match(RE_FUNCTION))) {
+          token = TokenType.FuntionName
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_PROPERTY_VALUE_SHORT))) {
           token = TokenType.CssPropertyValue
-          state = State.AfterPropertyValue
+          state = State.AfterPropertyNameAfterColon
         } else if ((next = part.match(RE_SEMICOLON))) {
           token = TokenType.Punctuation
           state = State.InsideSelector
-        } else {
-          throw new Error('no')
-        }
-        break
-      case State.AfterPropertyValue:
-        if ((next = part.match(RE_SEMICOLON))) {
-          token = TokenType.CssPropertySemicolon
-          state = State.InsideSelector
-        } else if ((next = part.match(RE_WHITESPACE))) {
-          token = TokenType.Whitespace
-          state = State.AfterPropertyValue
-        } else if ((next = part.match(RE_NUMERIC))) {
-          token = TokenType.Numeric
-          state = State.AfterPropertyValue
-        } else if ((next = part.match(RE_PROPERTY_VALUE_SHORT))) {
-          token = TokenType.CssPropertyValue
-          state = State.AfterPropertyValue
         } else if ((next = part.match(RE_PROPERTY_VALUE))) {
           token = TokenType.CssPropertyValue
-          state = State.AfterPropertyValue
+          state = State.AfterPropertyNameAfterColon
         } else if ((next = part.match(RE_CURLY_CLOSE))) {
           token = TokenType.Punctuation
           state = State.TopLevelContent
         } else {
-          part //?
+          part
           throw new Error('no')
         }
         break
@@ -525,5 +509,3 @@ export const tokenizeLine = (line, lineState) => {
 // TODO test :hover, :after, :before, ::first-letter
 
 // TODO test complex background image url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23b64e4e'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")
-
-tokenizeLine(`h1{  --color-2: rgb(0 0 0 / 2%);}`, initialLineState) //?
