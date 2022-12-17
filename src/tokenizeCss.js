@@ -18,6 +18,7 @@ export const State = {
   InsideDoubleQuoteString: 15,
   InsideSingleQuoteString: 16,
   AfterFunctionNameInsideArguments: 17,
+  AfterKeywordImport: 18,
 }
 
 export const StateMap = {
@@ -53,6 +54,7 @@ export const TokenType = {
   CssSelectorId: 889,
   FuntionName: 890,
   String: 891,
+  KeywordImport: 892,
 }
 
 export const TokenMap = {
@@ -78,6 +80,7 @@ export const TokenMap = {
   [TokenType.CssSelectorId]: 'CssSelectorId',
   [TokenType.FuntionName]: 'Function',
   [TokenType.String]: 'String',
+  [TokenType.KeywordImport]: 'KeywordImport',
 }
 
 const RE_SELECTOR = /^[\.a-zA-Z\d\-\:>\+\~\_%]+/
@@ -176,6 +179,10 @@ export const tokenizeLine = (line, lineState) => {
               token = TokenType.Query
               state = State.AfterQueryWithRules
               break
+            case '@import':
+              token = TokenType.KeywordImport
+              state = State.AfterKeywordImport
+              break
             case '@keyframes':
             default:
               token = TokenType.Query
@@ -186,6 +193,9 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.CssSelector
           state = State.AfterSelector
         } else if ((next = part.match(RE_CURLY_CLOSE))) {
+          token = TokenType.Punctuation
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_SEMICOLON))) {
           token = TokenType.Punctuation
           state = State.TopLevelContent
         } else if ((next = part.match(RE_ANYTHING))) {
@@ -478,6 +488,20 @@ export const tokenizeLine = (line, lineState) => {
           state = stack.pop() || State.TopLevelContent
         } else if ((next = part.match(RE_STRING_DOUBLE_QUOTE_CONTENT))) {
           token = TokenType.String
+          state = State.InsideDoubleQuoteString
+        } else {
+          throw new Error('no')
+        }
+        break
+      case State.AfterKeywordImport:
+        if ((next = part.match(RE_WHITESPACE))) {
+          token = TokenType.Whitespace
+          state = State.AfterKeywordImport
+        } else if ((next = part.match(RE_SINGLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = State.InsideSingleQuoteString
+        } else if ((next = part.match(RE_DOUBLE_QUOTE))) {
+          token = TokenType.Punctuation
           state = State.InsideDoubleQuoteString
         } else {
           throw new Error('no')
