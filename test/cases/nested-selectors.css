@@ -1,0 +1,7 @@
+.hover-language-status>.severity.sev3 {
+  color: var(--foreground)
+}
+
+.hover-language-status>.severity.sev2 {
+  color: var(--foreground)
+}

@@ -420,6 +420,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_PROPERTY_VALUE_SHORT))) {
           token = TokenType.CssPropertyValue
           state = State.AfterFunctionName
+        } else if ((next = part.match(RE_CURLY_CLOSE))) {
+          token = TokenType.Punctuation
+          state = State.TopLevelContent
         } else {
           part
           throw new Error('no')
