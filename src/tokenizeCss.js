@@ -83,7 +83,7 @@ export const TokenMap = {
   [TokenType.KeywordImport]: 'KeywordImport',
 }
 
-const RE_SELECTOR = /^[\.a-zA-Z\d\-\:>\+\~\_%]+/
+const RE_SELECTOR = /^[\.a-zA-Z\d\-\:>\+\~\_%\\]+/
 const RE_SELECTOR_ID = /^#[\w\-\_]+/
 const RE_WHITESPACE = /^\s+/
 const RE_CURLY_OPEN = /^\{/
