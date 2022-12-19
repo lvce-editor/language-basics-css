@@ -1,0 +1,3 @@
+.\.app-name-folder-icon.folder-icon::before {
+  background-image: url('/icons/folder_type_app.svg');
+}
