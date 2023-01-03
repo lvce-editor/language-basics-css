@@ -341,6 +341,10 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_FUNCTION))) {
           token = TokenType.FuntionName
           state = State.AfterFunctionName
+        } else if ((next = part.match(RE_SINGLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = State.InsideSingleQuoteString
+          stack.push(State.AfterPropertyNameAfterColon)
         } else if ((next = part.match(RE_PROPERTY_VALUE_SHORT))) {
           token = TokenType.CssPropertyValue
           state = State.AfterPropertyNameAfterColon
