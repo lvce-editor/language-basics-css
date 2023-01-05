@@ -345,6 +345,10 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.Punctuation
           state = State.InsideSingleQuoteString
           stack.push(State.AfterPropertyNameAfterColon)
+        } else if ((next = part.match(RE_DOUBLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = State.InsideDoubleQuoteString
+          stack.push(State.AfterPropertyNameAfterColon)
         } else if ((next = part.match(RE_PROPERTY_VALUE_SHORT))) {
           token = TokenType.CssPropertyValue
           state = State.AfterPropertyNameAfterColon
