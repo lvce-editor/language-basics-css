@@ -1,5 +1,7 @@
 # Language Basics Css
 
+> Css syntax highlighting for Lvce Editor
+
 ## Contributing
 
 ```sh
