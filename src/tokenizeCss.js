@@ -257,6 +257,13 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_COMMA))) {
           token = TokenType.Punctuation
           state = State.AfterQuery
+        } else if ((next = part.match(RE_DOUBLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = State.InsideDoubleQuoteString
+          stack.push(State.AfterQuery)
+        } else if ((next = part.match(RE_SEMICOLON))) {
+          token = TokenType.Punctuation
+          state = stack.pop() || State.TopLevelContent
         } else {
           part
           throw new Error('no')
