@@ -1,0 +1,3 @@
+:is(section.is-styling, aside.is-styling, footer.is-styling) a {
+  color: red;
+}

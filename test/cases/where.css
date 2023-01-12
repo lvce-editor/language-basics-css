@@ -1,0 +1,3 @@
+:where(section.where-styling, aside.where-styling, footer.where-styling) a {
+  color: orange;
+}
