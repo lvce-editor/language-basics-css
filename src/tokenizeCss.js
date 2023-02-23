@@ -306,6 +306,9 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.Comment
           state = State.InsideBlockComment
           stack.push(State.InsideSelector)
+        } else if ((next = part.match(RE_STAR))) {
+          token = TokenType.Punctuation
+          state = State.InsideSelector
         } else if ((next = part.match(RE_ANYTHING_UNTIL_CLOSE_BRACE))) {
           token = TokenType.Unknown
           state = State.InsideSelector

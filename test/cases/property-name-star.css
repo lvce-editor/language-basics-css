@@ -1,0 +1,4 @@
+audio, canvas, video {
+  *display: inline;
+  *zoom: 1;
+}
