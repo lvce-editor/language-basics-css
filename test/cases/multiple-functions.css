@@ -1,0 +1,3 @@
+:root {
+  --image_height: calc(min(var(--height), (80vw / 4)));
+}
