@@ -6,7 +6,8 @@
     {
       "id": "css",
       "extensions": [".css"],
-      "tokenize": "src/tokenizeCss.js"
+      "tokenize": "src/tokenizeCss.js",
+      "configuration": "languageConfiguration.json"
     }
   ]
 }
