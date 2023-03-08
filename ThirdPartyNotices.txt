@@ -27,6 +27,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+
 2) License Notice for languageConfiguration.json (based on https://github.com/microsoft/vscode/blob/53b2bf8f7729da4e8bdc55111b20248e6af572c9/extensions/css/language-configuration.json)
 
 MIT License
