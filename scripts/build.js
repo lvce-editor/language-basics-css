@@ -16,6 +16,10 @@ fs.copyFileSync(
   join(root, 'extension.json'),
   join(root, 'dist', 'extension.json')
 )
+fs.copyFileSync(
+  join(root, 'languageConfiguration.json'),
+  join(root, 'dist', 'languageConfiguration.json')
+)
 fs.cpSync(join(root, 'src'), join(root, 'dist', 'src'), { recursive: true })
 
 await packageExtension({
