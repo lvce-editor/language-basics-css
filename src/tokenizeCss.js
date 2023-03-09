@@ -468,7 +468,7 @@ export const tokenizeLine = (line, lineState) => {
           state = State.AfterFunctionName
         } else if ((next = part.match(RE_ROUND_CLOSE))) {
           token = TokenType.Punctuation
-          state = State.AfterFunctionNameInsideArguments
+          state = stack.pop() || State.InsideSelector
         } else if ((next = part.match(RE_SEMICOLON))) {
           token = TokenType.Punctuation
           state = State.InsideSelector
@@ -495,6 +495,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_PROPERTY_VALUE_INSIDE_FUNCTION))) {
           token = TokenType.CssPropertyValue
           state = State.AfterFunctionName
+        } else if ((next = part.match(RE_CURLY_CLOSE))) {
+          token = TokenType.Punctuation
+          state = stack.pop() || State.TopLevelContent
         } else {
           part
           throw new Error('no')
