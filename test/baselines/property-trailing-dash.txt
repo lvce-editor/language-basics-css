@@ -4,6 +4,5 @@ Punctuation
 NewLine
 Whitespace
 CssPropertyName
-Unknown
 NewLine
 Punctuation
