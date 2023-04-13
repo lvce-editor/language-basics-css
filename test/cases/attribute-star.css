@@ -1,0 +1,5 @@
+[class*=' gallery-icon--']::before {
+  content: '';
+  display: block;
+  width: 1rem;
+}
