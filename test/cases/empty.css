@@ -1,0 +1,3 @@
+.gallery .photo .meta li strong:empty {
+  padding: 0.125rem 2rem;
+}
