@@ -1,0 +1,5 @@
+selectmenu::part(button) {
+  border: 2px solid #aa99a0;
+  border-radius: 0.15rem;
+  padding: 0.6rem;
+}
