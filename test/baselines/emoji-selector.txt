@@ -1,5 +1,6 @@
 CssSelector
 Unknown
+Punctuation
 NewLine
 NewLine
 Punctuation
