@@ -120,6 +120,7 @@ const RE_DOUBLE_QUOTE = /^"/
 const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"]+/
 const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^']+/
 const RE_SINGLE_QUOTE = /^'/
+const RE_ANYTHING_BUT_CURLY = /^[^\{\}]+/s
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -230,6 +231,9 @@ export const tokenizeLine = (line, lineState) => {
           state = State.InsideAttributeSelector
         } else if ((next = part.match(RE_STAR))) {
           token = TokenType.CssSelector
+          state = State.AfterSelector
+        } else if ((next = part.match(RE_ANYTHING_BUT_CURLY))) {
+          token = TokenType.Unknown
           state = State.AfterSelector
         } else if ((next = part.match(RE_ANYTHING))) {
           token = TokenType.Unknown

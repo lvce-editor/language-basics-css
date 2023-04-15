@@ -1,9 +1,14 @@
 CssSelector
 Unknown
+Punctuation
 NewLine
 Whitespace
-CssSelector
+CssPropertyName
+Punctuation
 Whitespace
-Unknown
+Punctuation
+String
+Punctuation
+Punctuation
 NewLine
 Punctuation
