@@ -336,6 +336,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_NUMERIC))) {
           token = TokenType.Numeric
           state = State.AfterPropertyNameAfterColon
+        } else if ((next = part.match(RE_PROPERTY_NAME))) {
+          token = TokenType.CssPropertyName
+          state = State.AfterPropertyName
         } else if ((next = part.match(RE_ANYTHING_UNTIL_CLOSE_BRACE))) {
           token = TokenType.Unknown
           state = State.InsideSelector

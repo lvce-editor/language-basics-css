@@ -1,0 +1,14 @@
+CssSelector
+Whitespace
+Punctuation
+NewLine
+Whitespace
+CssPropertyName
+Whitespace
+CssPropertyName
+Whitespace
+CssPropertyName
+Whitespace
+CssPropertyName
+NewLine
+Punctuation
