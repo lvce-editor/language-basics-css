@@ -7,7 +7,7 @@ Whitespace
 Punctuation
 NewLine
 Whitespace
-CssSelector
+CssSelectorClass
 Whitespace
 Punctuation
 NewLine

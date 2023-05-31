@@ -2,7 +2,7 @@ Comment
 Comment
 Comment
 NewLine
-CssSelector
+CssSelectorClass
 Whitespace
 Punctuation
 NewLine

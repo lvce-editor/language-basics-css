@@ -55,6 +55,7 @@ export const TokenType = {
   FuntionName: 890,
   String: 891,
   KeywordImport: 892,
+  CssSelectorClass: 893,
 }
 
 export const TokenMap = {
@@ -81,10 +82,12 @@ export const TokenMap = {
   [TokenType.FuntionName]: 'Function',
   [TokenType.String]: 'String',
   [TokenType.KeywordImport]: 'KeywordImport',
+  [TokenType.CssSelectorClass]: 'CssSelectorClass',
 }
 
 const RE_SELECTOR = /^[\.a-zA-Z\d\-\:>\+\~\_%\\]+/
 const RE_SELECTOR_ID = /^#[\w\-\_]+/
+const RE_SELECTOR_CLASS = /^\.[\w\-\_]+/
 const RE_WHITESPACE = /^\s+/
 const RE_CURLY_OPEN = /^\{/
 const RE_CURLY_CLOSE = /^\}/
@@ -153,7 +156,10 @@ export const tokenizeLine = (line, lineState) => {
     const part = line.slice(index)
     switch (state) {
       case State.TopLevelContent:
-        if ((next = part.match(RE_SELECTOR))) {
+        if ((next = part.match(RE_SELECTOR_CLASS))) {
+          token = TokenType.CssSelectorClass
+          state = State.AfterSelector
+        } else if ((next = part.match(RE_SELECTOR))) {
           token = TokenType.CssSelector
           state = State.AfterSelector
         } else if ((next = part.match(RE_SELECTOR_ID))) {
