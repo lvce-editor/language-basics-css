@@ -1,12 +1,7 @@
 CssSelectorClass
-Whitespace
+Punctuation
+NewLine
 CssSelectorClass
-Whitespace
-CssSelectorClass
-Whitespace
-CssSelector
-Whitespace
-CssSelector
 Whitespace
 Punctuation
 NewLine
@@ -16,10 +11,6 @@ Punctuation
 Whitespace
 Numeric
 CssPropertyValue
-Whitespace
-Numeric
-CssPropertyValue
 Punctuation
 NewLine
 Punctuation
-NewLine
