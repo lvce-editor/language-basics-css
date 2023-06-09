@@ -1,0 +1,5 @@
+@scope (.theme-white, .theme-gray) {
+  a {
+    color: #00528a;
+  }
+}
