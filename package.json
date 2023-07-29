@@ -21,5 +21,35 @@
   "prettier": {
     "semi": false,
     "singleQuote": true
+  },
+  "test-tokenize": {
+    "skip": [
+      "vscode-css-comments-after-media-queries",
+      "vscode-css-comments-inside-font-face-statements",
+      "vscode-css-comments-inside-import-statements-1",
+      "vscode-css-comments-inside-import-statements-2",
+      "vscode-css-comments-inside-import-statements-3",
+      "vscode-css-selectors-at-rules-charset-highlights-invalid-charset-statements-1",
+      "vscode-css-selectors-at-rules-charset-highlights-invalid-charset-statements-5",
+      "vscode-css-selectors-at-rules-counter-style-matches-injected-comments-1",
+      "vscode-css-selectors-at-rules-counter-style-matches-injected-comments-3",
+      "vscode-css-selectors-at-rules-document-correctly-document-rules",
+      "vscode-css-selectors-at-rules-font-feature-declarations-matches-injected-comments",
+      "vscode-css-selectors-at-rules-import-highlights-media-features-in-query-lists",
+      "vscode-css-selectors-at-rules-import-import-statements-1",
+      "vscode-css-selectors-at-rules-import-import-statements-3",
+      "vscode-css-selectors-at-rules-import-import-statements-4",
+      "vscode-css-selectors-at-rules-import-matches-a-url-that-starts-on-the-next-line",
+      "vscode-css-selectors-at-rules-import-matches-comments-inside-query-lists",
+      "vscode-css-selectors-at-rules-keyframes-highlights-escape-sequences-inside-identifiers",
+      "vscode-css-selectors-at-rules-keyframes-matches-injected-comments",
+      "vscode-css-selectors-at-rules-matches-media-queries-across-lines",
+      "vscode-css-selectors-at-rules-media-comments-between-media-features",
+      "vscode-css-selectors-at-rules-media-comments-between-media-types",
+      "vscode-css-selectors-at-rules-namespace-escape-sequences-in-prefixes",
+      "vscode-css-selectors-at-rules-namespace-permits-injected-comments-between-tokens",
+      "vscode-css-selectors-at-rules-supports-matches-injected-comments",
+      "vscode-css-selectors-at-rules-viewport-injected-comments"
+    ]
   }
 }

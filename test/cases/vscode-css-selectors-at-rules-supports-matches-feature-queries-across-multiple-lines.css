@@ -1,0 +1,6 @@
+@supports
+  (box-shadow: 0 0 2px rgba(0,0,0,.5) inset) or
+  (-moz-box-shadow: 0 0 2px black inset) or
+  (-webkit-box-shadow: 0 0 2px black inset) or
+  (-o-box-shadow: 0 0 2px black inset)
+{ .noticebox { } }

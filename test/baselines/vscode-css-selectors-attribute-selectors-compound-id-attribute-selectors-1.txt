@@ -1,0 +1,7 @@
+CssSelectorId
+Punctuation
+CssSelector
+Punctuation
+Punctuation
+Whitespace
+Punctuation

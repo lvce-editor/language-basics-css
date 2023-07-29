@@ -1,0 +1,7 @@
+Unknown
+NewLine
+Whitespace
+Punctuation
+CssSelector
+NewLine
+CssSelector

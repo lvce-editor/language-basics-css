@@ -1,0 +1,16 @@
+@supports (animation-name: test) {
+  #node {
+    animation-name: test;
+  }
+  body > header[data-name="attr"] ~ *:not(:first-child){
+    content: "😂👌"
+  }
+  @keyframes important1 {
+    from {
+      margin-top: 50px;
+      margin-bottom: 100px
+    }
+    50%  { margin-top: 150px !important; } /* Ignored */
+    to   { margin-top: 100px; }
+  }
+}

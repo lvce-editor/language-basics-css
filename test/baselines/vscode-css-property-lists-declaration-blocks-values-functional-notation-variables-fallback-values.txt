@@ -1,0 +1,15 @@
+CssSelectorClass
+Punctuation
+Whitespace
+CssPropertyName
+Punctuation
+Whitespace
+Function
+Punctuation
+VariableName
+Punctuation
+Whitespace
+CssPropertyValue
+Punctuation
+Unknown
+Punctuation

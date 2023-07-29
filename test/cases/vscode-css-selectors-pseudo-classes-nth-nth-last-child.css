@@ -1,0 +1,4 @@
+:nth-last-child(2n)
+:nth-last-child( -2n)
+:nth-last-child( 2n )
+:nth-last-child(even)

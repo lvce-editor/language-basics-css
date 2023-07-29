@@ -1,0 +1,8 @@
+CssSelectorId
+CssSelector
+Punctuation
+CssPropertyName
+Unknown
+Punctuation
+Whitespace
+Punctuation
