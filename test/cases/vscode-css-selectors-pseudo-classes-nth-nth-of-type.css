@@ -1,0 +1,3 @@
+img:nth-of-type(+n+1)
+img:nth-of-type(-n+1)
+img:nth-of-type(n+1)

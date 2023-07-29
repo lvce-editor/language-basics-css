@@ -1,0 +1,9 @@
+.font{
+  font-variant-alternates: stylistic(user-defined-ident);
+  font-variant-alternates: styleset(user-defined-ident);
+  font-variant-alternates: character-variant(user-defined-ident);
+  font-variant-alternates: swash(user-defined-ident);
+  font-variant-alternates: ornaments(user-defined-ident);
+  font-variant-alternates: annotation(user-defined-ident);
+  font-variant-alternates: swash(ident1) annotation(ident2);
+}

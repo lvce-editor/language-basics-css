@@ -23,6 +23,7 @@ const simplifyPrefix = (testName) => {
       'class-selectors-class-selectors',
       'class-selectors-class-selectors',
     )
+    .replaceAll('import-import', 'import')
     .replaceAll('id-selectors-id-selectors', 'id-selectors')
     .replaceAll('transforms-transform', 'transform')
     .replaceAll('dir-dir', 'dir')
@@ -84,10 +85,22 @@ const getFirstQuote = (line) => {
   return ''
 }
 
+const getEndIndex = (line, startIndex, quote) => {
+  for (let i = startIndex + 1; i < line.length; i++) {
+    const char = line[i]
+    if (char === '\\') {
+      i++
+    } else if (char === quote) {
+      return i
+    }
+  }
+  return -1
+}
+
 const getTokenizeLineContent = (line) => {
   const quote = getFirstQuote(line)
   const startIndex = line.indexOf(quote)
-  const endIndex = line.indexOf(quote, startIndex + 1)
+  const endIndex = getEndIndex(line, startIndex, quote)
   if (startIndex === -1 || endIndex === -1) {
     throw new Error(`failed to parse line content`)
   }
@@ -141,6 +154,16 @@ const parseLevel = (line) => {
   return level
 }
 
+const getItCount = (lines) => {
+  let itCount = 0
+  for (const line of lines) {
+    if (line.trim().startsWith('it ')) {
+      itCount++
+    }
+  }
+  return itCount
+}
+
 const parseFile = (content) => {
   const tests = []
   const lines = content.split('\n')
@@ -170,6 +193,7 @@ const parseFile = (content) => {
           state = 'inside-tokenize-lines'
         } else if (
           trimmedLine.includes(`grammar.tokenizeLine `) ||
+          trimmedLine.includes(`grammar.tokenizeLine('`) ||
           trimmedLine.includes(`grammar.tokenizeLines('`) ||
           trimmedLine.includes(`grammar.tokenizeLines("`) ||
           trimmedLine.includes(`grammar.tokenizeLines '`) ||
@@ -218,6 +242,10 @@ const parseFile = (content) => {
     ) {
       test.testName = test.testName.slice(0, -2)
     }
+  }
+  const itCount = getItCount(lines)
+  if (itCount > tests.length) {
+    console.warn(`less tests than expected: ${tests.length} < ${itCount}`)
   }
   return tests
 }

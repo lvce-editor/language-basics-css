@@ -1,0 +1,6 @@
+a{
+  width: calc(3px + -1em);
+  width: calc(3px - -1em);
+  width: calc(3px * 2);
+  width: calc(3px / 2);
+}

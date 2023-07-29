@@ -1,0 +1,5 @@
+[disabled]:not(:first-child)::before:hover
+  ~ div.object
+  + #id.thing:hover > strong ~ p::before,
+a::last-of-type,/*Comment*/::selection > html[lang^=en-AU],
+*>em.i.ly[data-name|="Life"] { }

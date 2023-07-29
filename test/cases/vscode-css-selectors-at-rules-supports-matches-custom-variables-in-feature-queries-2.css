@@ -1,0 +1,3 @@
+@supports not ((tab-size:4) or (-moz-tab-size:4)){
+  body::before{content: "Come on, Microsoft (Get it together already)…"; }
+}

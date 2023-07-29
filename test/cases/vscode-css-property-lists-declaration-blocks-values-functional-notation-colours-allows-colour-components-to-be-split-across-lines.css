@@ -1,0 +1,9 @@
+.frost{
+  background-color: rgba(
+    var(--red),    /* Red */
+    var(--green),  /* Green */
+    var(--blue),   /* Blue */
+    /* var(--test),
+    /**/var(--opacity) /* Transparency */
+  );
+}

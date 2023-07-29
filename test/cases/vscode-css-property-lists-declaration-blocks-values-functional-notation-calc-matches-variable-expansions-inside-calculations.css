@@ -1,0 +1,1 @@
+.foo { margin-top: calc(var(--gap) + 1px); }

@@ -1,0 +1,4 @@
+a{
+  shape-outside: circle(20em/*=*/at 50% 50%);
+  shape-outside: inset(1em, 1em, 1em, 1em);
+}
