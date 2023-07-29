@@ -124,6 +124,7 @@ const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"]+/
 const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^']+/
 const RE_SINGLE_QUOTE = /^'/
 const RE_ANYTHING_BUT_CURLY = /^[^\{\}]+/s
+const RE_PUNCTUATION = /^[\.:\(\)]/
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -277,6 +278,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_SEMICOLON))) {
           token = TokenType.Punctuation
           state = stack.pop() || State.TopLevelContent
+        } else if ((next = part.match(RE_PUNCTUATION))) {
+          token = TokenType.Punctuation
+          state = State.AfterQuery
         } else {
           part
           throw new Error('no')

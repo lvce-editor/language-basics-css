@@ -1,0 +1,7 @@
+@layer demo {
+  @media (prefers-color-scheme: dark) {
+    body {
+      --base-grade: -25;
+    }
+  }
+}
