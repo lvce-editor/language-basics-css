@@ -1,5 +1,7 @@
 CssSelector
-Unknown
+Punctuation
+CssSelector
+Whitespace
 Punctuation
 Whitespace
 Punctuation

@@ -9,7 +9,7 @@ Punctuation
 Unknown
 NewLine
 Whitespace
-Unknown
+Punctuation
 NewLine
 CssSelector
 Unknown
