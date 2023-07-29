@@ -1,0 +1,5 @@
+body {
+  @media (prefers-contrast: more)     { --base-weight: 700 }
+  @media (prefers-contrast: less)     { --base-weight: 200 }
+  @media (prefers-color-scheme: dark) { --base-grade: -25 }
+}
