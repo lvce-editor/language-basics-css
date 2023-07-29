@@ -1,0 +1,6 @@
+body {
+  font-variation-settings:
+    "wght" var(--base-weight),
+    "GRAD" var(--base-grade)
+  ;
+}
