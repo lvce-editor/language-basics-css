@@ -12,5 +12,7 @@ Whitespace
 Punctuation
 CssPropertyValue
 Punctuation
+Punctuation
+Punctuation
 Unknown
 Punctuation
