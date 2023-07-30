@@ -9,8 +9,5 @@ Comment
 Punctuation
 Whitespace
 CssSelector
-Whitespace
-CssSelector
-Punctuation
-Whitespace
-Punctuation
+Unknown
+Unknown

@@ -1,4 +1,2 @@
 CssSelector
-Whitespace
-CssSelector
-Punctuation
+Unknown

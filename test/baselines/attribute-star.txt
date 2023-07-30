@@ -1,8 +1,7 @@
 Punctuation
 CssSelector
 Punctuation
-CssSelector
-Whitespace
+Unknown
 Punctuation
 NewLine
 Whitespace

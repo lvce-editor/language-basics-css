@@ -1,1 +1,1 @@
-CssSelector
+CssPseudoSelector

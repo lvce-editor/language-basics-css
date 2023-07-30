@@ -12,6 +12,7 @@ Whitespace
 CssSelectorClass
 Whitespace
 CssSelector
+CssPseudoSelector
 Whitespace
 Punctuation
 Whitespace

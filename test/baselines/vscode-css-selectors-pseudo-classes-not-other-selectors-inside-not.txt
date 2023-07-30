@@ -1,9 +1,9 @@
 CssSelector
-CssSelector
+CssPseudoSelector
 Punctuation
 CssSelector
 Punctuation
-CssSelector
+CssPseudoSelector
 Punctuation
 CssSelector
 Punctuation

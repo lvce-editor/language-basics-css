@@ -10,7 +10,7 @@ CssSelector
 Whitespace
 CssSelector
 Whitespace
-CssSelector
+CssPseudoSelector
 Punctuation
 CssSelector
 Punctuation

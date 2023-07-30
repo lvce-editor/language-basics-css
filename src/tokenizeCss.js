@@ -56,6 +56,7 @@ export const TokenType = {
   String: 891,
   KeywordImport: 892,
   CssSelectorClass: 893,
+  CssPseudoSelector: 894,
 }
 
 export const TokenMap = {
@@ -83,10 +84,12 @@ export const TokenMap = {
   [TokenType.String]: 'String',
   [TokenType.KeywordImport]: 'KeywordImport',
   [TokenType.CssSelectorClass]: 'CssSelectorClass',
+  [TokenType.CssPseudoSelector]: 'CssPseudoSelector',
 }
 
-const RE_SELECTOR = /^[\.a-zA-Z\d\-:>+~_%\\\p{L}]+/u
+const RE_SELECTOR = /^[\.a-zA-Z\d\->+~_%\\\p{L}]+/u
 const RE_SELECTOR_ID = /^#[\w\-\_]+/
+const RE_PSEUDO_SELECTOR = /^:[\p{L}\-]+/u
 const RE_SELECTOR_CLASS = /^\.[\w\-_\p{L}]+/u
 const RE_WHITESPACE = /^\s+/
 const RE_CURLY_OPEN = /^\{/
@@ -171,6 +174,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_WHITESPACE))) {
           token = TokenType.Whitespace
           state = State.TopLevelContent
+        } else if ((next = part.match(RE_PSEUDO_SELECTOR))) {
+          token = TokenType.CssPseudoSelector
+          state = State.AfterSelector
         } else if ((next = part.match(RE_CURLY_OPEN))) {
           token = TokenType.CurlyOpen
           state = State.InsideSelector
@@ -253,6 +259,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_SEMICOLON))) {
           token = TokenType.Punctuation
           state = stack.pop() || State.TopLevelContent
+        } else if ((next = part.match(RE_PSEUDO_SELECTOR))) {
+          token = TokenType.CssPseudoSelector
+          state = State.AfterSelector
         } else if ((next = part.match(RE_ANYTHING_BUT_CURLY))) {
           token = TokenType.Unknown
           state = State.AfterSelector

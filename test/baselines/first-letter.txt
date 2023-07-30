@@ -1,6 +1,5 @@
 CssSelectorClass
-CssSelector
-Whitespace
+Unknown
 Punctuation
 NewLine
 Whitespace
