@@ -4,5 +4,6 @@ Whitespace
 CssSelector
 Whitespace
 CssSelector
-Unknown
-Unknown
+Punctuation
+Whitespace
+Punctuation
