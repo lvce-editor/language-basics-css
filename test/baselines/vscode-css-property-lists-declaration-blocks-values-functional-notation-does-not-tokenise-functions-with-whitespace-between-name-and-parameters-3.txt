@@ -5,6 +5,9 @@ Punctuation
 CssPropertyValue
 Whitespace
 CssPropertyValue
+Punctuation
+Punctuation
 CssPropertyValue
 Punctuation
 Punctuation
+String
