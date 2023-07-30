@@ -1,6 +1,6 @@
 CssSelector
 Whitespace
-CssSelector
+CssPseudoSelector
 Whitespace
 Punctuation
 NewLine

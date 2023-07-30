@@ -34,7 +34,7 @@ Whitespace
 CssSelector
 Whitespace
 CssSelector
-CssSelector
+CssPseudoSelector
 Punctuation
 CssSelector
 Punctuation

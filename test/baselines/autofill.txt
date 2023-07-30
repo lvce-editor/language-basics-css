@@ -1,4 +1,5 @@
 CssSelector
+CssPseudoSelector
 Whitespace
 Punctuation
 NewLine

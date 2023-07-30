@@ -1,14 +1,17 @@
 CssSelector
+CssPseudoSelector
 Punctuation
 CssSelector
 Punctuation
 NewLine
 CssSelector
+CssPseudoSelector
 Punctuation
 CssSelector
 Punctuation
 NewLine
 CssSelector
+CssPseudoSelector
 Punctuation
 CssSelector
 Punctuation

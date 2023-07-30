@@ -1,4 +1,4 @@
-CssSelector
+CssPseudoSelector
 Punctuation
 CssSelector
 NewLine

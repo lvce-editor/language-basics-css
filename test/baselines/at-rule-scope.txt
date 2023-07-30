@@ -6,7 +6,7 @@ Punctuation
 Punctuation
 NewLine
 Whitespace
-CssSelector
+CssPseudoSelector
 Whitespace
 Punctuation
 NewLine
