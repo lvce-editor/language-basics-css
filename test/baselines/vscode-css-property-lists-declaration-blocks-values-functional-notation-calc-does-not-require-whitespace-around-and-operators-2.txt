@@ -9,6 +9,8 @@ Punctuation
 Numeric
 CssPropertyValue
 Punctuation
+Numeric
+Punctuation
 Punctuation
 Whitespace
 Punctuation

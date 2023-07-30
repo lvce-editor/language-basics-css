@@ -7,7 +7,9 @@ Whitespace
 Function
 Punctuation
 Whitespace
+Punctuation
 CssPropertyValue
+Punctuation
 Whitespace
 VariableName
 Whitespace

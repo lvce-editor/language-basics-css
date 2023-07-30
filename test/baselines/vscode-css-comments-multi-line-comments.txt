@@ -9,13 +9,10 @@ Punctuation
 Numeric
 CssPropertyValue
 Whitespace
-CssPropertyValue
-Punctuation
+Comment
+Comment
 NewLine
-Whitespace
-CssPropertyName
-Punctuation
-Numeric
-CssPropertyValue
+Comment
+Comment
 NewLine
 Punctuation

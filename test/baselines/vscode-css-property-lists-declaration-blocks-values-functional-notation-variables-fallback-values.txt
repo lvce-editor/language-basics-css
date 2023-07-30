@@ -9,6 +9,7 @@ Punctuation
 VariableName
 Punctuation
 Whitespace
+Punctuation
 CssPropertyValue
 Punctuation
 Unknown

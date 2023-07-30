@@ -5,4 +5,7 @@ CssPropertyName
 Punctuation
 Numeric
 CssPropertyValue
+Comment
+Comment
+Comment
 Punctuation

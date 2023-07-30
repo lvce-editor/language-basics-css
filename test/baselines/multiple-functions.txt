@@ -20,7 +20,7 @@ Punctuation
 Numeric
 CssPropertyValue
 Whitespace
-CssPropertyValue
+Punctuation
 Whitespace
 Numeric
 Punctuation

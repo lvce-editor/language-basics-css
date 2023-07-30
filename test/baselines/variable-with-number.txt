@@ -14,7 +14,7 @@ Numeric
 Whitespace
 Numeric
 Whitespace
-CssPropertyValue
+Punctuation
 Whitespace
 Numeric
 CssPropertyValue
