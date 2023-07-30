@@ -126,6 +126,7 @@ const RE_SINGLE_QUOTE = /^'/
 const RE_ANYTHING_BUT_CURLY = /^[^\{\}]+/s
 const RE_PUNCTUATION = /^[\.:\(\)]/
 const RE_VERTICAL_LINE = /^\|/
+const RE_SLASH = /^\//
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -244,6 +245,9 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.CssSelector
           state = State.AfterSelector
         } else if ((next = part.match(RE_VERTICAL_LINE))) {
+          token = TokenType.Punctuation
+          state = State.AfterSelector
+        } else if ((next = part.match(RE_SLASH))) {
           token = TokenType.Punctuation
           state = State.AfterSelector
         } else if ((next = part.match(RE_ANYTHING_BUT_CURLY))) {

@@ -1,3 +1,7 @@
 CssSelectorClass
 Whitespace
-Unknown
+Punctuation
+CssSelector
+Punctuation
+Whitespace
+CssSelector
