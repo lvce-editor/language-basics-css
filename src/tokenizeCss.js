@@ -250,6 +250,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_SLASH))) {
           token = TokenType.Punctuation
           state = State.AfterSelector
+        } else if ((next = part.match(RE_SEMICOLON))) {
+          token = TokenType.Punctuation
+          state = stack.pop() || State.TopLevelContent
         } else if ((next = part.match(RE_ANYTHING_BUT_CURLY))) {
           token = TokenType.Unknown
           state = State.AfterSelector
@@ -293,6 +296,9 @@ export const tokenizeLine = (line, lineState) => {
           stack.push(state)
           token = TokenType.Comment
           state = State.InsideBlockComment
+        } else if ((next = part.match(RE_SEMICOLON))) {
+          token = TokenType.Punctuation
+          state = stack.pop() || State.TopLevelContent
         } else if ((next = part.match(RE_ANYTHING_UNTIL_CLOSE_BRACE))) {
           token = TokenType.Text
           state = stack.pop() || State.TopLevelContent

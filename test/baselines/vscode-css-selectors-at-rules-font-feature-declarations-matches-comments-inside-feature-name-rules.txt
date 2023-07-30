@@ -20,7 +20,9 @@ CssSelector
 CssSelector
 Punctuation
 CssSelector
-Unknown
-Unknown
+Punctuation
+Comment
+Comment
+Punctuation
 NewLine
 Punctuation
