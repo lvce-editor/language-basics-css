@@ -1,5 +1,4 @@
 CssAtRule
-Text
 Punctuation
 Whitespace
 CssSelector
@@ -10,7 +9,6 @@ Whitespace
 Punctuation
 NewLine
 CssAtRule
-Text
 Punctuation
 Whitespace
 CssSelector
@@ -21,7 +19,6 @@ Whitespace
 Punctuation
 NewLine
 CssAtRule
-Text
 Punctuation
 Whitespace
 CssSelector
@@ -32,7 +29,6 @@ Whitespace
 Punctuation
 NewLine
 CssAtRule
-Text
 Punctuation
 Whitespace
 CssSelector
@@ -42,6 +38,25 @@ Punctuation
 Whitespace
 Punctuation
 NewLine
-Unknown
+CssAtRule
+Punctuation
+Whitespace
+CssSelector
+Whitespace
+CssSelector
+Whitespace
+CssSelector
+Whitespace
+CssSelector
+Punctuation
+Whitespace
+Punctuation
 NewLine
+CssAtRule
+Punctuation
+Whitespace
+CssSelector
+Whitespace
+CssSelector
+Whitespace
 Unknown

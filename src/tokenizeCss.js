@@ -110,7 +110,7 @@ const RE_PSEUDO_SELECTOR_CONTENT = /^[^\)]+/
 const RE_SQUARE_OPEN = /^\[/
 const RE_SQUARE_CLOSE = /^\]/
 const RE_ATTRIBUTE_SELECTOR_CONTENT = /^[^\]]+/
-const RE_QUERY = /^@[a-z\-]+/
+const RE_QUERY = /^@[a-zA-Z\w\-\d\_]+/
 const RE_STAR = /^\*/
 const RE_QUERY_NAME = /^[a-zA-Z\w\-\d\_]+/
 const RE_QUERY_CONTENT = /^[^\)]+/
@@ -181,7 +181,7 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.Punctuation
           state = State.InsideAttributeSelector
         } else if ((next = part.match(RE_QUERY))) {
-          switch (next[0]) {
+          switch (next[0].toLocaleLowerCase()) {
             case '@font-face':
             case '@-ms-viewport':
             case '@-o-viewport':
@@ -594,7 +594,12 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_DOUBLE_QUOTE))) {
           token = TokenType.Punctuation
           state = State.InsideDoubleQuoteString
+        } else if ((next = part.match(RE_FUNCTION))) {
+          stack.push(state)
+          token = TokenType.FuntionName
+          state = State.AfterFunctionName
         } else {
+          part
           throw new Error('no')
         }
         break
@@ -619,6 +624,9 @@ export const tokenizeLine = (line, lineState) => {
   }
   if (state === State.AfterPropertyName) {
     state = State.InsideSelector
+  }
+  if (state === State.AfterKeywordImport) {
+    state = State.TopLevelContent
   }
   return {
     state,
