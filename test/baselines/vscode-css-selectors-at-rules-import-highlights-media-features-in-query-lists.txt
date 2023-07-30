@@ -1,0 +1,15 @@
+KeywordImport
+Whitespace
+Function
+Punctuation
+CssPropertyValue
+Punctuation
+Whitespace
+CssPropertyValue
+Whitespace
+CssPropertyValue
+Whitespace
+Punctuation
+CssPropertyValue
+Punctuation
+Punctuation
