@@ -85,7 +85,7 @@ export const TokenMap = {
   [TokenType.CssSelectorClass]: 'CssSelectorClass',
 }
 
-const RE_SELECTOR = /^[\.a-zA-Z\d\-\:>\+\~\_%\\]+/
+const RE_SELECTOR = /^[\.a-zA-Z\d\-:>+~_%\\\p{L}]+/u
 const RE_SELECTOR_ID = /^#[\w\-\_]+/
 const RE_SELECTOR_CLASS = /^\.[\w\-_\p{L}]+/u
 const RE_WHITESPACE = /^\s+/
