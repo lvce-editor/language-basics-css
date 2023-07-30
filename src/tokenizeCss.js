@@ -293,6 +293,9 @@ export const tokenizeLine = (line, lineState) => {
           stack.push(state)
           token = TokenType.Comment
           state = State.InsideBlockComment
+        } else if ((next = part.match(RE_ANYTHING_UNTIL_CLOSE_BRACE))) {
+          token = TokenType.Text
+          state = stack.pop() || State.TopLevelContent
         } else {
           part
           throw new Error('no')

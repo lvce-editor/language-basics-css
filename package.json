@@ -30,8 +30,6 @@
       "vscode-css-comments-inside-import-statements-3",
       "vscode-css-selectors-at-rules-charset-highlights-invalid-charset-statements-1",
       "vscode-css-selectors-at-rules-charset-highlights-invalid-charset-statements-5",
-      "vscode-css-selectors-at-rules-counter-style-matches-injected-comments-1",
-      "vscode-css-selectors-at-rules-counter-style-matches-injected-comments-3",
       "vscode-css-selectors-at-rules-document-correctly-document-rules",
       "vscode-css-selectors-at-rules-font-feature-declarations-matches-injected-comments",
       "vscode-css-selectors-at-rules-import-highlights-media-features-in-query-lists",
