@@ -9,10 +9,12 @@ Punctuation
 VariableName
 Punctuation
 Whitespace
+Comment
+Comment
+Comment
+Whitespace
+Numeric
 Punctuation
-CssPropertyValue
 Punctuation
-Punctuation
-Punctuation
-Unknown
+Whitespace
 Punctuation

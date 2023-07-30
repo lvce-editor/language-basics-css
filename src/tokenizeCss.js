@@ -94,7 +94,7 @@ const RE_CURLY_CLOSE = /^\}/
 const RE_PROPERTY_NAME = /^[a-zA-Z\-\w]+/
 const RE_COLON = /^:/
 const RE_PROPERTY_VALUE = /^[^;\}\/]+/
-const RE_PROPERTY_VALUE_SHORT = /^[^;\}\s\)\/]+/
+const RE_PROPERTY_VALUE_SHORT = /^[^;\}\s\)\/\*]+/
 const RE_PROPERTY_VALUE_INSIDE_FUNCTION = /^[^\}\s\)]+/
 const RE_SEMICOLON = /^;/
 const RE_COMMA = /^,/
@@ -499,7 +499,14 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_CURLY_CLOSE))) {
           token = TokenType.Punctuation
           state = State.TopLevelContent
+        } else if ((next = part.match(RE_BLOCK_COMMENT_START))) {
+          stack.push(state)
+          token = TokenType.Comment
+          state = State.InsideBlockComment
         } else if ((next = part.match(RE_SLASH))) {
+          token = TokenType.Punctuation
+          state = State.AfterFunctionName
+        } else if ((next = part.match(RE_STAR))) {
           token = TokenType.Punctuation
           state = State.AfterFunctionName
         } else {
