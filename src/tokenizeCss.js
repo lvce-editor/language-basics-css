@@ -341,6 +341,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_QUERY))) {
           token = TokenType.Query
           state = State.AfterQuery
+        } else if ((next = part.match(RE_SEMICOLON))) {
+          token = TokenType.Punctuation
+          state = State.InsideSelector
         } else if ((next = part.match(RE_ANYTHING_UNTIL_CLOSE_BRACE))) {
           token = TokenType.Unknown
           state = State.InsideSelector
