@@ -9,9 +9,9 @@ Function
 Punctuation
 Numeric
 CssPropertyValue
-Punctuation
-CssPropertyValue
-Punctuation
+Comment
+Comment
+Comment
 CssPropertyValue
 Whitespace
 Numeric
