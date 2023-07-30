@@ -15,6 +15,11 @@ NewLine
 Comment
 Comment
 CssSelector
+Punctuation
+CssSelector
+CssSelector
+Punctuation
+CssSelector
 Unknown
 Unknown
 NewLine

@@ -12,7 +12,7 @@ Whitespace
 Punctuation
 NewLine
 CssSelector
-Unknown
+Punctuation
 NewLine
 CssSelector
 Unknown

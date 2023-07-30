@@ -50,5 +50,9 @@ Punctuation
 Punctuation
 Punctuation
 CssSelector
+Punctuation
+CssSelectorId
+Whitespace
+CssSelector
 Unknown
 Unknown
