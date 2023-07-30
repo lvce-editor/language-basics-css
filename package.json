@@ -24,7 +24,6 @@
   },
   "test-tokenize": {
     "skip": [
-      "vscode-css-comments-inside-font-face-statements",
       "vscode-css-comments-inside-import-statements-1",
       "vscode-css-comments-inside-import-statements-2",
       "vscode-css-comments-inside-import-statements-3",
