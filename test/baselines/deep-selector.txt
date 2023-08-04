@@ -5,6 +5,7 @@ CssSelector
 Punctuation
 Whitespace
 CssSelector
+CssSelectorClass
 Whitespace
 Punctuation
 NewLine

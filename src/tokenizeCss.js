@@ -87,10 +87,10 @@ export const TokenMap = {
   [TokenType.CssPseudoSelector]: 'CssPseudoSelector',
 }
 
-const RE_SELECTOR = /^[\.a-zA-Z\d\->+~_%\\\p{L}]+/u
-const RE_SELECTOR_ID = /^#[\w\-\_]+/
+const RE_SELECTOR_ELEMENT = /^[a-zA-Z\d\->+~_%\\\p{L}]+/u
+const RE_SELECTOR_ID = /^#[\w\-\_\\]+/
 const RE_PSEUDO_SELECTOR = /^:[\p{L}\-]+/u
-const RE_SELECTOR_CLASS = /^\.[\w\-_\p{L}]+/u
+const RE_SELECTOR_CLASS = /^\.[\w\-_\p{L}\p{Emoji_Presentation}]+/u
 const RE_WHITESPACE = /^\s+/
 const RE_CURLY_OPEN = /^\{/
 const RE_CURLY_CLOSE = /^\}/
@@ -165,7 +165,7 @@ export const tokenizeLine = (line, lineState) => {
         if ((next = part.match(RE_SELECTOR_CLASS))) {
           token = TokenType.CssSelectorClass
           state = State.AfterSelector
-        } else if ((next = part.match(RE_SELECTOR))) {
+        } else if ((next = part.match(RE_SELECTOR_ELEMENT))) {
           token = TokenType.CssSelector
           state = State.AfterSelector
         } else if ((next = part.match(RE_SELECTOR_ID))) {
@@ -232,7 +232,7 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_SELECTOR_CLASS))) {
           token = TokenType.CssSelectorClass
           state = State.AfterSelector
-        } else if ((next = part.match(RE_SELECTOR))) {
+        } else if ((next = part.match(RE_SELECTOR_ELEMENT))) {
           token = TokenType.CssSelector
           state = State.AfterSelector
         } else if ((next = part.match(RE_SELECTOR_ID))) {
