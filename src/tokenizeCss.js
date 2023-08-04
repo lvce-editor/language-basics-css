@@ -253,6 +253,10 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_VERTICAL_LINE))) {
           token = TokenType.Punctuation
           state = State.AfterSelector
+        } else if ((next = part.match(RE_BLOCK_COMMENT_START))) {
+          stack.push(state)
+          token = TokenType.Comment
+          state = State.InsideBlockComment
         } else if ((next = part.match(RE_SLASH))) {
           token = TokenType.Punctuation
           state = State.AfterSelector
