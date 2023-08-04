@@ -5,5 +5,7 @@ Whitespace
 Punctuation
 Whitespace
 CssSelector
+CssSelectorClass
+CssSelector
 Whitespace
 Unknown

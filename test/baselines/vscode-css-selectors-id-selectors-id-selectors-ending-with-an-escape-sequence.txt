@@ -1,5 +1,4 @@
 CssSelectorId
-CssSelector
 Punctuation
 CssPropertyName
 Unknown
