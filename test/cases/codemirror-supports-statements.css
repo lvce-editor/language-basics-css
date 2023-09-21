@@ -1,0 +1,6 @@
+@supports (animation-name: test) {
+  div { animation-name: test; }
+}
+@supports (transform-style: preserve) or (-moz-transform-style: preserve) {}
+@supports not ((text-align-last: justify) or (-moz-text-align-last: justify)) {}
+@supports not selector(:matches(a, b)) {}

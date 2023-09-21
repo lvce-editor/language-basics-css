@@ -1,0 +1,4 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("/a") format("woff2"), url("/b/c") format("woff");
+}

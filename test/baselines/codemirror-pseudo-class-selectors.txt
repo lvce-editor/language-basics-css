@@ -1,0 +1,14 @@
+CssSelector
+CssPseudoSelector
+Whitespace
+Punctuation
+Punctuation
+NewLine
+CssPseudoSelector
+Punctuation
+CssSelector
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+NewLine

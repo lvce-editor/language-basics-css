@@ -1,0 +1,15 @@
+CssSelectorClass
+Whitespace
+Punctuation
+Punctuation
+NewLine
+CssSelector
+CssSelectorClass
+Punctuation
+Whitespace
+CssSelectorClass
+CssSelectorClass
+Whitespace
+Punctuation
+Punctuation
+NewLine

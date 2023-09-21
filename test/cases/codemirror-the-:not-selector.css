@@ -1,0 +1,2 @@
+a:not(:hover) {}
+.b:not(c > .d) {}

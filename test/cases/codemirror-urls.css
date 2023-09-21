@@ -1,0 +1,3 @@
+a {
+  b: url(http://something-else?foo=bar);
+}
