@@ -1,0 +1,10 @@
+.request-payload-view {
+  user-select: text;
+  overflow: auto;
+}
+
+.request-payload-tree {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin: 0;
+}

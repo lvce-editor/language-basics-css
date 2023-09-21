@@ -1,0 +1,22 @@
+:host {
+  display: inline;
+}
+
+.node-link {
+  cursor: pointer;
+  display: inline;
+  pointer-events: auto;
+}
+
+.node-link:focus-visible {
+  outline-width: unset;
+}
+
+.node-label-name {
+  color: var(--sys-color-token-property-special);
+}
+
+.node-label-class,
+.node-label-pseudo {
+  color: var(--sys-color-token-attribute);
+}

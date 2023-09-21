@@ -1,0 +1,22 @@
+.delete-button {
+  width: 16px;
+  height: 16px;
+  background: transparent;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+.delete-button:hover devtools-icon {
+  --icon-color: var(--sys-color-token-subtle);
+}
+
+.delete-button:focus devtools-icon {
+  --icon-color: var(--sys-color-token-subtle);
+}
+
+.button-container {
+  display: block;
+  text-align: center;
+}

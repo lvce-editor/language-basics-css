@@ -1,0 +1,22 @@
+.css-angle {
+  display: inline-block;
+  position: relative;
+  outline: none;
+}
+
+devtools-css-angle-swatch {
+  display: inline-block;
+  margin-right: 2px;
+  user-select: none;
+}
+
+devtools-css-angle-editor {
+  --override-dial-color: #a3a3a3;
+
+  position: fixed;
+  z-index: 2;
+}
+
+.preview {
+  display: inline-block;
+}

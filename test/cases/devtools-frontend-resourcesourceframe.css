@@ -1,0 +1,8 @@
+.searchable-view {
+  flex: 1;
+}
+
+.toolbar {
+  background-color: var(--sys-color-cdt-base-container);
+  border-top: 1px solid var(--sys-color-divider);
+}

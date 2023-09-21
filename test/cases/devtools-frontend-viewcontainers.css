@@ -1,0 +1,52 @@
+.expandable-view-title {
+  display: flex;
+  align-items: center;
+  background-color: var(--sys-color-surface2);
+  height: 22px;
+  padding: 0 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid transparent;
+}
+
+.expandable-view-title.expanded,
+.expandable-view-title:last-child {
+  border-bottom: 1px solid var(--sys-color-divider);
+}
+
+.expandable-view-title .toolbar {
+  margin-top: -3px;
+}
+
+.expandable-view-title > .toolbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.expandable-view-title:not(.expanded) .toolbar {
+  display: none;
+}
+
+.title-expand-icon {
+  margin-right: 2px;
+  margin-bottom: -2px;
+}
+
+.expandable-view-title:focus-visible {
+  background-color: var(--legacy-focus-bg-color);
+}
+
+@media (forced-colors: active) {
+  .expandable-view-title:focus-visible {
+    forced-color-adjust: none;
+    color: HighlightText;
+    background-color: Highlight;
+    box-shadow: 0 0 0 2px Highlight inset;
+  }
+
+  .expandable-view-title:focus-visible .title-expand-icon {
+    background-color: HighlightText;
+  }
+}

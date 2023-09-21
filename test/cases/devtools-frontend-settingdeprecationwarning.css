@@ -1,0 +1,8 @@
+.clickable {
+  cursor: pointer;
+}
+
+devtools-icon {
+  vertical-align: text-bottom;
+  padding-left: 2px;
+}

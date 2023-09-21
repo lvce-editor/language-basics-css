@@ -1,0 +1,7 @@
+:host {
+  grid-column-start: span 2;
+}
+
+.section-divider {
+  border-bottom: 1px solid var(--sys-color-divider);
+}

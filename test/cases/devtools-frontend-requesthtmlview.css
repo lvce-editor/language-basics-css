@@ -1,0 +1,9 @@
+.html-preview-frame {
+  /* We always want a white background, even in dark mode */
+  --override-preview-frame-background: #fff;
+
+  box-shadow: var(--drop-shadow);
+  background: var(--override-preview-frame-background);
+  flex-grow: 1;
+  margin: 20px;
+}

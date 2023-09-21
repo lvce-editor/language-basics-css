@@ -1,0 +1,4 @@
+.navigator-toolbar {
+  border-bottom: 1px solid var(--sys-color-divider);
+  padding-left: 8px;
+}

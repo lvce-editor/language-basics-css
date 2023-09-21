@@ -1,0 +1,26 @@
+.widget {
+  padding: 20px;
+}
+
+.message,
+.button {
+  font-size: larger;
+  white-space: pre;
+  margin: 5px;
+}
+
+.button {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.reason {
+  --override-reason-color: #8b0000;
+
+  color: var(--override-reason-color);
+}
+
+.-theme-with-dark-background .reason,
+:host-context(.-theme-with-dark-background) .reason {
+  --override-reason-color: rgb(255 116 116);
+}

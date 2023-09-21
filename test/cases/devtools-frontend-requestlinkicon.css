@@ -1,0 +1,19 @@
+:host {
+  display: inline-block;
+  white-space: nowrap;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+devtools-icon {
+  vertical-align: middle;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.link span {
+  color: var(--color-link);
+}

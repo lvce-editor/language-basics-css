@@ -1,0 +1,17 @@
+.layers-3d-view {
+  overflow: hidden;
+  user-select: none;
+}
+
+.toolbar {
+  background-color: var(--sys-color-cdt-base-container);
+  border-bottom: 1px solid var(--sys-color-divider);
+}
+
+canvas {
+  flex: 1 1;
+}
+
+.layers-3d-view > canvas:focus-visible {
+  outline: auto 5px -webkit-focus-ring-color;
+}

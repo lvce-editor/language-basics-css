@@ -1,0 +1,12 @@
+img {
+  max-height: 300px;
+  border-radius: 2px;
+}
+
+.animation-progress {
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--legacy-selection-bg-color);
+}
