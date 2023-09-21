@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+devtools-header-section-row:last-of-type {
+  margin-bottom: 10px;
+}
+
+devtools-header-section-row:first-of-type {
+  margin-top: 2px;
+}
+
+.add-header-button {
+  margin: -4px 0 10px 5px;
+}

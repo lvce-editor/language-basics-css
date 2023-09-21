@@ -1,0 +1,23 @@
+:host {
+  padding: 12px;
+}
+
+[is="dt-checkbox"] {
+  margin: 0 0 10px;
+  flex: none;
+}
+
+.panel-section-separator {
+  height: 1px;
+  margin-bottom: 10px;
+  background: var(--sys-color-divider);
+  flex: none;
+}
+
+.panel-section-separator:last-child {
+  background: transparent;
+}
+
+.chrome-select-label {
+  margin-bottom: 16px;
+}

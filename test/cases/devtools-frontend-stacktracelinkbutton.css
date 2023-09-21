@@ -1,0 +1,10 @@
+button.link {
+  color: var(--sys-color-primary);
+  text-decoration: underline;
+  cursor: pointer;
+  outline-offset: 2px;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+}

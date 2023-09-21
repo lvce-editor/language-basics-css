@@ -1,0 +1,21 @@
+.styles-element-state-pane {
+  overflow: hidden;
+  padding-left: 2px;
+  background-color: var(--sys-color-cdt-base-container);
+  border-bottom: 1px solid var(--sys-color-divider);
+  margin-top: 0;
+  padding-bottom: 2px;
+}
+
+.styles-element-state-pane > div {
+  margin: 8px 4px 6px;
+}
+
+.styles-element-state-pane > table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.styles-element-state-pane td {
+  padding: 0;
+}

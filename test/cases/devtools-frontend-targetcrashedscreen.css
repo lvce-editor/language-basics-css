@@ -1,0 +1,9 @@
+.widget {
+  padding: 25px;
+}
+
+.message {
+  font-size: larger;
+  white-space: pre;
+  margin: 5px;
+}

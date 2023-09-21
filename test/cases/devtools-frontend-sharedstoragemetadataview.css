@@ -1,0 +1,10 @@
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.info-icon {
+  vertical-align: text-bottom;
+  margin-left: 2px;
+}

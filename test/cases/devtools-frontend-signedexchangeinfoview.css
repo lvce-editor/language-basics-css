@@ -1,0 +1,10 @@
+.signed-exchange-info-view {
+  user-select: text;
+  overflow: auto;
+}
+
+.signed-exchange-info-tree {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin: 0;
+}

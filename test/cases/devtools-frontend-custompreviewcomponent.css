@@ -1,0 +1,14 @@
+.custom-expandable-section {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.custom-expand-icon {
+  user-select: none;
+  margin-right: 4px;
+  margin-bottom: -4px;
+}
+
+.custom-expandable-section-standard-section {
+  display: inline-flex;
+}

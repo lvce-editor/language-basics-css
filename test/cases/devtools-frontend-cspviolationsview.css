@@ -1,0 +1,7 @@
+.csp-violations-pane {
+  overflow: hidden;
+}
+
+.csp-violations-toolbar {
+  border-bottom: 1px solid var(--sys-color-divider);
+}

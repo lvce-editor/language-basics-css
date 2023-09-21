@@ -1,0 +1,15 @@
+.overview-info:not(:empty) {
+  display: flex;
+  background: var(--color-background);
+  box-shadow: var(--drop-shadow);
+  padding: 3px;
+}
+
+.overview-info .frame .time {
+  display: none;
+}
+
+.overview-info .frame .thumbnail img {
+  max-width: 50vw;
+  max-height: 50vh;
+}

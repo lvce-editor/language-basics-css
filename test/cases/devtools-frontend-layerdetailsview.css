@@ -1,0 +1,23 @@
+table td {
+  padding-left: 8px;
+}
+
+table td:first-child {
+  font-weight: bold;
+}
+
+.scroll-rect.active {
+  background-color: var(--sys-color-neutral-container);
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.devtools-link.link-margin {
+  margin: 8px;
+  display: inline-block;
+}

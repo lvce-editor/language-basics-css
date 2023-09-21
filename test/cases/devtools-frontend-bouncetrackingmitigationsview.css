@@ -1,0 +1,12 @@
+devtools-data-grid-controller {
+  border: 1px solid var(--sys-color-divider);
+  margin-top: 0;
+}
+
+.link,
+.devtools-link {
+  color: var(--sys-color-primary);
+  text-decoration: underline;
+  cursor: pointer;
+  outline-offset: 2px;
+}

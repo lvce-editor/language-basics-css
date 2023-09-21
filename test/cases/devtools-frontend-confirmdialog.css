@@ -1,0 +1,27 @@
+.widget {
+  padding: 20px;
+}
+
+.message {
+  text-align: center;
+}
+
+.message,
+.button {
+  font-size: larger;
+  white-space: pre;
+  margin: 5px;
+}
+
+.button {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.button button {
+  min-width: 80px;
+}
+
+.reason {
+  color: var(--color-accent-red);
+}
