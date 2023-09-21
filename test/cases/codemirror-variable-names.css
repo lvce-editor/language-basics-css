@@ -1,0 +1,4 @@
+foo {
+  --my-variable: white;
+  color: var(--my-variable);
+}

@@ -1,0 +1,5 @@
+a {
+  width: calc(100% - 80px);
+  aspect-ratio: 1/2;
+  font-size: calc(10px + (56 - 10) * ((100vw - 320px) / (1920 - 320)));
+}

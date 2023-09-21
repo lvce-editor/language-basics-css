@@ -1,0 +1,6 @@
+@keyframes anim-1 {
+  entry 0%  { margin-top: 50px; }
+  entry 100%  { margin-top: 50px; }
+  exit 0% { margin-top: 50px; }
+  exit 100% { margin-top: 50px; }
+}

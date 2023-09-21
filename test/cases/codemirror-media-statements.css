@@ -1,0 +1,4 @@
+@media screen and (min-width: 30em) and (orientation: landscape) {}
+@media (min-height: 680px), screen and (orientation: portrait) {}
+@media not all and (monochrome) {}
+@media only screen {}
