@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 
 const REPO = 'https://github.com/microsoft/vscode-css'
-const COMMIT = '3bd00206f6b0d16eb2eba53fb886462eb8c58baa'
+const COMMIT = 'c216f777497265700ff336f739328e5197e012cd'
 
 const simplifyPrefix = (testName) => {
   return testName
