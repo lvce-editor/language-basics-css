@@ -1,0 +1,3 @@
+:not(:empty){
+  padding: 5px;
+}
