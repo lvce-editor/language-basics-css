@@ -1306,7 +1306,12 @@ Punctuation
 NewLine
 NewLine
 Whitespace
-Unknown
+Punctuation
+CssPseudoSelector
+Whitespace
+CssSelector
+Whitespace
+Punctuation
 NewLine
 Whitespace
 VariableName

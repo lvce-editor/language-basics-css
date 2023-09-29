@@ -265,7 +265,10 @@ Punctuation
 NewLine
 NewLine
 Whitespace
-Unknown
+Punctuation
+CssPseudoSelector
+Whitespace
+Punctuation
 NewLine
 Whitespace
 CssPropertyName
