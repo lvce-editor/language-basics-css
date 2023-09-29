@@ -102,6 +102,7 @@ const RE_PROPERTY_VALUE_INSIDE_FUNCTION = /^[^\}\s\)]+/
 const RE_SEMICOLON = /^;/
 const RE_COMMA = /^,/
 const RE_ANYTHING = /^.+/s
+const RE_AMPERSAND = /^\&/
 const RE_NUMERIC = /^\-?(([0-9]+\.?[0-9]*)|(\.[0-9]+))/
 const RE_ANYTHING_UNTIL_CLOSE_BRACE = /^[^\}]+/
 const RE_BLOCK_COMMENT_START = /^\/\*/
@@ -370,12 +371,16 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_SEMICOLON))) {
           token = TokenType.Punctuation
           state = State.InsideSelector
+        } else if ((next = part.match(RE_AMPERSAND))) {
+          token = TokenType.Punctuation
+          state = State.TopLevelContent
+          stack.push(State.InsideSelector)
         } else if ((next = part.match(RE_ANYTHING_UNTIL_CLOSE_BRACE))) {
           token = TokenType.Unknown
           state = State.InsideSelector
         } else if ((next = part.match(RE_CURLY_CLOSE))) {
           token = TokenType.CurlyClose
-          state = State.TopLevelContent
+          state = stack.pop() || State.TopLevelContent
         } else {
           throw new Error('no')
         }
@@ -415,9 +420,6 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_FUNCTION))) {
           token = TokenType.FuntionName
           state = State.AfterFunctionName
-        } else if ((next = part.match(RE_FUNCTION))) {
-          token = TokenType.FuntionName
-          state = State.AfterFunctionName
         } else if ((next = part.match(RE_SINGLE_QUOTE))) {
           token = TokenType.Punctuation
           state = State.InsideSingleQuoteString
@@ -437,7 +439,7 @@ export const tokenizeLine = (line, lineState) => {
           state = State.AfterPropertyNameAfterColon
         } else if ((next = part.match(RE_CURLY_CLOSE))) {
           token = TokenType.Punctuation
-          state = State.TopLevelContent
+          state = stack.pop() || State.TopLevelContent
         } else if ((next = part.match(RE_BLOCK_COMMENT_START))) {
           stack.push(state)
           token = TokenType.Comment
@@ -527,7 +529,7 @@ export const tokenizeLine = (line, lineState) => {
           state = State.AfterFunctionName
         } else if ((next = part.match(RE_CURLY_CLOSE))) {
           token = TokenType.Punctuation
-          state = State.TopLevelContent
+          state = stack.pop() || State.TopLevelContent
         } else if ((next = part.match(RE_BLOCK_COMMENT_START))) {
           stack.push(state)
           token = TokenType.Comment
