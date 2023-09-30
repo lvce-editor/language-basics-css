@@ -1,0 +1,3 @@
+:not(.position) > *:not(.border):not(.padding):not(.content) {
+  height: 10px;
+}
