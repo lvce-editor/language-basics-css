@@ -1,0 +1,6 @@
+.media {
+  &.media-message-warning,
+  &.media-message-error {
+    border: none;
+  }
+}
