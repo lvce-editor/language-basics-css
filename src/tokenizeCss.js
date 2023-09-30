@@ -267,6 +267,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_PSEUDO_SELECTOR))) {
           token = TokenType.CssPseudoSelector
           state = State.AfterSelector
+        } else if ((next = part.match(RE_AMPERSAND))) {
+          token = TokenType.Punctuation
+          state = State.AfterSelector
         } else if ((next = part.match(RE_ANYTHING_BUT_CURLY))) {
           token = TokenType.Unknown
           state = State.AfterSelector

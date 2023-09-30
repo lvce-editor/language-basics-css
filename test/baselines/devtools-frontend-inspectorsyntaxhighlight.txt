@@ -392,7 +392,13 @@ CssPseudoSelector
 Whitespace
 CssSelectorClass
 Whitespace
-Unknown
+Punctuation
+Whitespace
+Punctuation
+CssSelector
+Punctuation
+CssSelectorClass
+Whitespace
 Punctuation
 NewLine
 Whitespace
