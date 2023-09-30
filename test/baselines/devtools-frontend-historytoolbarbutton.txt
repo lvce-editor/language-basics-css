@@ -144,7 +144,8 @@ NewLine
 NewLine
 CssSelectorClass
 CssPseudoSelector
-Unknown
+CssPseudoSelector
+Whitespace
 Punctuation
 NewLine
 Whitespace

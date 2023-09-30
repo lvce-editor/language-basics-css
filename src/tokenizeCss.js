@@ -89,7 +89,7 @@ export const TokenMap = {
 
 const RE_SELECTOR_ELEMENT = /^[a-zA-Z\d\->+~_%\\\p{L}]+/u
 const RE_SELECTOR_ID = /^#[\w\-\_\\]+/
-const RE_PSEUDO_SELECTOR = /^:[\p{L}\-]+/u
+const RE_PSEUDO_SELECTOR = /^::?[\p{L}\-]+/u
 const RE_SELECTOR_CLASS = /^\.[\w\-_\p{L}\p{Emoji_Presentation}]+/u
 const RE_WHITESPACE = /^\s+/
 const RE_CURLY_OPEN = /^\{/

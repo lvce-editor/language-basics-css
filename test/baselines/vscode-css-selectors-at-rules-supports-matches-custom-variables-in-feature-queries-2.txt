@@ -16,7 +16,7 @@ Punctuation
 NewLine
 Whitespace
 CssSelector
-Unknown
+CssPseudoSelector
 Punctuation
 CssPropertyName
 Punctuation

@@ -690,7 +690,8 @@ Punctuation
 NewLine
 NewLine
 CssSelectorClass
-Unknown
+CssPseudoSelector
+Whitespace
 Punctuation
 NewLine
 Whitespace

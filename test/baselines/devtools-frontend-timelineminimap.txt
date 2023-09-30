@@ -178,12 +178,14 @@ NewLine
 CssSelectorClass
 Whitespace
 CssSelectorId
-Unknown
+CssPseudoSelector
+Punctuation
 NewLine
 CssSelectorClass
 Whitespace
 CssSelectorId
-Unknown
+CssPseudoSelector
+Whitespace
 Punctuation
 NewLine
 Whitespace
