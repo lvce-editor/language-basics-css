@@ -330,10 +330,12 @@ Punctuation
 NewLine
 NewLine
 CssSelector
-Unknown
+CssPseudoSelector
+Punctuation
 NewLine
 CssSelector
-Unknown
+CssPseudoSelector
+Whitespace
 Punctuation
 NewLine
 Whitespace

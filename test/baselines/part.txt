@@ -1,5 +1,9 @@
 CssSelector
-Unknown
+CssPseudoSelector
+Punctuation
+CssSelector
+Punctuation
+Whitespace
 Punctuation
 NewLine
 Whitespace

@@ -73,7 +73,8 @@ NewLine
 NewLine
 CssSelector
 CssSelectorClass
-Unknown
+CssPseudoSelector
+Whitespace
 Punctuation
 NewLine
 Whitespace

@@ -336,7 +336,8 @@ CssSelectorClass
 Whitespace
 CssSelector
 CssSelectorClass
-Unknown
+CssPseudoSelector
+Whitespace
 Punctuation
 NewLine
 Whitespace
@@ -383,7 +384,8 @@ Punctuation
 Whitespace
 CssSelector
 CssSelectorClass
-Unknown
+CssPseudoSelector
+Whitespace
 Punctuation
 NewLine
 Whitespace
@@ -408,7 +410,8 @@ Punctuation
 Whitespace
 CssSelector
 CssSelectorClass
-Unknown
+CssPseudoSelector
+Whitespace
 Punctuation
 NewLine
 Whitespace
@@ -430,7 +433,8 @@ CssSelectorClass
 Whitespace
 CssSelector
 CssSelectorClass
-Unknown
+CssPseudoSelector
+Whitespace
 Punctuation
 NewLine
 Whitespace
@@ -625,7 +629,8 @@ CssPseudoSelector
 Punctuation
 CssSelector
 Punctuation
-Unknown
+CssPseudoSelector
+Punctuation
 NewLine
 Whitespace
 CssSelectorClass
