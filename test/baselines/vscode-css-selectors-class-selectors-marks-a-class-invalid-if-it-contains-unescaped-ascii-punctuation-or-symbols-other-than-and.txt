@@ -1,3 +1,4 @@
 CssSelectorClass
-Unknown
+Punctuation
+CssSelector
 Punctuation

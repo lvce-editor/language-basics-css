@@ -126,7 +126,16 @@ CssPseudoSelector
 Punctuation
 NewLine
 Whitespace
-Unknown
+Punctuation
+Whitespace
+CssSelector
+Whitespace
+CssSelector
+CssPseudoSelector
+Punctuation
+CssSelector
+Punctuation
+Whitespace
 Punctuation
 NewLine
 Whitespace

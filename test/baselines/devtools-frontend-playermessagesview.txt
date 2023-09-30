@@ -203,7 +203,9 @@ CssSelectorClass
 Punctuation
 NewLine
 Whitespace
-Unknown
+Punctuation
+CssSelectorClass
+Whitespace
 Punctuation
 NewLine
 Whitespace
