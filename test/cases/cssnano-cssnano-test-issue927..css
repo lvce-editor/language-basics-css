@@ -1,0 +1,6 @@
+div{
+  grid-column: span 2;
+}
+p{
+  columns: 2 auto;
+}

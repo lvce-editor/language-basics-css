@@ -1,0 +1,12 @@
+CssSelector
+Punctuation
+CssPropertyName
+Punctuation
+CssPropertyValue
+Whitespace
+CssPropertyValue
+Whitespace
+Punctuation
+String
+Punctuation
+Punctuation
