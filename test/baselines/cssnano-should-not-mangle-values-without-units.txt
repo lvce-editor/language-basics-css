@@ -1,0 +1,7 @@
+CssSelector
+Punctuation
+CssPropertyName
+Punctuation
+Numeric
+Punctuation
+Unknown

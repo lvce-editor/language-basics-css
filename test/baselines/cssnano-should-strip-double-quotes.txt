@@ -1,0 +1,12 @@
+CssSelector
+Punctuation
+CssPropertyName
+Punctuation
+Function
+Punctuation
+Punctuation
+String
+Punctuation
+Punctuation
+Punctuation
+Unknown

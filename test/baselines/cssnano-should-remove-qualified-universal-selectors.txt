@@ -1,0 +1,16 @@
+CssSelectorId
+Punctuation
+CssSelectorClass
+Punctuation
+CssPseudoSelector
+Punctuation
+CssSelector
+Punctuation
+Punctuation
+Punctuation
+CssSelector
+Punctuation
+Punctuation
+CssPropertyName
+Punctuation
+CssPropertyValue

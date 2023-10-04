@@ -1,0 +1,1 @@
+*:not(*.green) ~ *{color:#00f}', ':not(.green)~*{color:#00f}
