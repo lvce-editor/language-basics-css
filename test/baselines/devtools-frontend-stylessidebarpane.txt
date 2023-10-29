@@ -426,6 +426,9 @@ Punctuation
 NewLine
 NewLine
 Whitespace
+Punctuation
+CssPropertyName
+Whitespace
 Unknown
 NewLine
 Whitespace
@@ -1364,8 +1367,14 @@ Punctuation
 NewLine
 NewLine
 Whitespace
+Punctuation
+CssPropertyName
+Whitespace
 Unknown
 NewLine
+Whitespace
+Punctuation
+CssPropertyName
 Whitespace
 Unknown
 NewLine
