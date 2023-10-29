@@ -28,6 +28,9 @@ NewLine
 NewLine
 Comment
 NewLine
+Punctuation
+CssPropertyName
+Whitespace
 Unknown
 NewLine
 Whitespace
