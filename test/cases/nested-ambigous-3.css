@@ -1,0 +1,4 @@
+span {
+  div:hover span {};
+  color: blue;
+}
