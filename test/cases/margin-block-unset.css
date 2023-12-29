@@ -1,0 +1,5 @@
+.grid {
+  display: grid;
+  row-gap: 1em;
+  &>* { margin-block: unset; }
+}
