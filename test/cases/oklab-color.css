@@ -1,0 +1,3 @@
+h1 {
+  background-color: oklab(from magenta calc(1 * 0.8) a b);
+}
