@@ -1,0 +1,5 @@
+@container style(--glossy: on) {
+  button {
+    box-shadow: 0 .1em hsl(0 0% 100% / .4) inest;
+  }
+}
