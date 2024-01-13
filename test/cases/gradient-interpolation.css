@@ -1,0 +1,5 @@
+@supports (background: linear-gradient(in lab red, tan)){
+  .foo {
+    background: linear-gradient(in lab, #f00, #0f0);
+  }
+}
