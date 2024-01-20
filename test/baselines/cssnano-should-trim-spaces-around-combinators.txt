@@ -1,6 +1,6 @@
 CssSelector
 Whitespace
-CssSelector
+Punctuation
 Whitespace
 CssSelector
 Punctuation

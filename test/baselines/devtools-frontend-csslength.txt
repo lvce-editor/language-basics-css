@@ -220,7 +220,8 @@ CssPseudoSelector
 Punctuation
 CssSelector
 Punctuation
-Unknown
+Punctuation
+Whitespace
 Punctuation
 NewLine
 Whitespace
@@ -238,7 +239,10 @@ CssPseudoSelector
 Punctuation
 CssSelector
 Punctuation
-Unknown
+Punctuation
+Whitespace
+CssSelectorClass
+Whitespace
 Punctuation
 NewLine
 Whitespace

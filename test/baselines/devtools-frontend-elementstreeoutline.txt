@@ -1714,7 +1714,7 @@ Punctuation
 CssSelector
 Punctuation
 Whitespace
-CssSelector
+Punctuation
 Whitespace
 CssSelector
 CssSelectorClass
@@ -1733,7 +1733,7 @@ Punctuation
 CssSelector
 Punctuation
 Whitespace
-CssSelector
+Punctuation
 Whitespace
 CssSelector
 CssSelectorClass
@@ -1806,7 +1806,7 @@ Punctuation
 CssSelector
 Punctuation
 Whitespace
-CssSelector
+Punctuation
 Whitespace
 CssSelector
 CssSelectorClass
@@ -1839,7 +1839,7 @@ Punctuation
 CssSelector
 Punctuation
 Whitespace
-CssSelector
+Punctuation
 Whitespace
 CssSelector
 CssSelectorClass

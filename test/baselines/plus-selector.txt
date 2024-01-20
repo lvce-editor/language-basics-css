@@ -1,5 +1,8 @@
 CssSelector
+Whitespace
 Punctuation
 Whitespace
 CssSelector
+Whitespace
+Punctuation
 Punctuation

@@ -110,6 +110,8 @@ Punctuation
 Whitespace
 NewLine
 CssSelector
+Punctuation
+CssSelector
 Whitespace
 Punctuation
 NewLine

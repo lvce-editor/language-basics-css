@@ -2,5 +2,9 @@ CssAtRule
 Punctuation
 Whitespace
 CssSelector
-Unknown
-Unknown
+Punctuation
+Whitespace
+CssSelector
+Punctuation
+Whitespace
+Punctuation

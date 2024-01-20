@@ -1120,7 +1120,7 @@ NewLine
 CssSelectorId
 CssPseudoSelector
 Whitespace
-CssSelector
+Punctuation
 Whitespace
 CssSelectorClass
 Whitespace

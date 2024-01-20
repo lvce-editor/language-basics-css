@@ -2,6 +2,8 @@ Unknown
 NewLine
 Whitespace
 CssSelector
-Unknown
+Punctuation
+Whitespace
+CssSelector
 NewLine
 Unknown

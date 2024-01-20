@@ -1,1 +1,6 @@
-Unknown
+Punctuation
+CssSelector
+CssSelectorClass
+Whitespace
+Punctuation
+Punctuation

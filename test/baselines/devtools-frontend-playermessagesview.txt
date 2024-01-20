@@ -175,7 +175,7 @@ NewLine
 NewLine
 CssSelectorClass
 Whitespace
-CssSelector
+Punctuation
 Whitespace
 CssSelectorClass
 Whitespace

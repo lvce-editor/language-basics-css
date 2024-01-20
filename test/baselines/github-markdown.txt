@@ -3862,6 +3862,8 @@ NewLine
 CssSelectorClass
 Whitespace
 CssSelector
+Punctuation
+CssSelector
 Whitespace
 Punctuation
 NewLine
@@ -6376,7 +6378,7 @@ NewLine
 CssSelectorClass
 Whitespace
 CssSelectorClass
-CssSelector
+Punctuation
 CssSelectorClass
 Whitespace
 Punctuation

@@ -268,7 +268,7 @@ Punctuation
 CssSelector
 Punctuation
 Whitespace
-CssSelector
+Punctuation
 Whitespace
 CssSelectorClass
 Whitespace

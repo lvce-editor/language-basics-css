@@ -971,7 +971,9 @@ Punctuation
 NewLine
 Whitespace
 CssSelector
-Unknown
+Punctuation
+Whitespace
+CssSelector
 Unknown
 NewLine
 CssSelectorClass

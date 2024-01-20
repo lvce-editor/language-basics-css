@@ -8,7 +8,8 @@ Punctuation
 Numeric
 CssSelector
 Punctuation
-Unknown
+Punctuation
+Whitespace
 Punctuation
 NewLine
 Whitespace
@@ -34,7 +35,8 @@ Punctuation
 Numeric
 CssSelector
 Punctuation
-Unknown
+Punctuation
+Whitespace
 Punctuation
 NewLine
 Whitespace
