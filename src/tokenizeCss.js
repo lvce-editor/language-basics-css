@@ -87,7 +87,7 @@ export const TokenMap = {
   [TokenType.CssPseudoSelector]: 'CssPseudoSelector',
 }
 
-const RE_SELECTOR_ELEMENT = /^[a-zA-Z\d\->+~_%\\\p{L}]+/u
+const RE_SELECTOR_ELEMENT = /^[a-zA-Z\d\->~_%\\\p{L}]+/u
 const RE_SELECTOR_ID = /^#[\w\-\_\\]+/
 const RE_PSEUDO_SELECTOR = /^::?[\p{L}\-]+/u
 const RE_SELECTOR_CLASS = /^\.[\w\-_\p{L}\p{Emoji_Presentation}]+/u
@@ -128,7 +128,7 @@ const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"]+/
 const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^']+/
 const RE_SINGLE_QUOTE = /^'/
 const RE_ANYTHING_BUT_CURLY = /^[^\{\}]+/s
-const RE_PUNCTUATION = /^[\.:\(\)]/
+const RE_PUNCTUATION = /^[\.:\(\)\+]/
 const RE_VERTICAL_LINE = /^\|/
 const RE_SLASH = /^\//
 
@@ -215,6 +215,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_SEMICOLON))) {
           token = TokenType.Punctuation
           state = State.TopLevelContent
+        } else if ((next = part.match(RE_PUNCTUATION))) {
+          token = TokenType.Punctuation
+          state = State.TopLevelContent
         } else if ((next = part.match(RE_ANYTHING))) {
           token = TokenType.Unknown
           state = State.TopLevelContent
@@ -268,6 +271,9 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.CssPseudoSelector
           state = State.AfterSelector
         } else if ((next = part.match(RE_AMPERSAND))) {
+          token = TokenType.Punctuation
+          state = State.AfterSelector
+        } else if ((next = part.match(RE_PUNCTUATION))) {
           token = TokenType.Punctuation
           state = State.AfterSelector
         } else if ((next = part.match(RE_ANYTHING_BUT_CURLY))) {

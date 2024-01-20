@@ -5,6 +5,11 @@ CssSelector
 Punctuation
 CssSelector
 Punctuation
-Unknown
+Punctuation
+CssPseudoSelector
+Punctuation
+CssSelector
+Punctuation
+Whitespace
 Punctuation
 Punctuation

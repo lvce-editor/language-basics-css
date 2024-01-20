@@ -12,7 +12,7 @@ NewLine
 CssSelectorClass
 CssSelectorClass
 Whitespace
-CssSelector
+Punctuation
 Whitespace
 CssSelectorClass
 CssSelectorClass

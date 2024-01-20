@@ -12,7 +12,10 @@ Whitespace
 Punctuation
 Whitespace
 CssSelector
-Unknown
+Punctuation
+Whitespace
+CssSelector
+Whitespace
 Unknown
 NewLine
 Whitespace
@@ -25,7 +28,10 @@ Whitespace
 Punctuation
 Whitespace
 CssSelector
-Unknown
+Punctuation
+Whitespace
+CssSelector
+Whitespace
 Unknown
 NewLine
 Whitespace
@@ -38,7 +44,10 @@ Whitespace
 Punctuation
 Whitespace
 CssSelector
-Unknown
+Punctuation
+Whitespace
+CssSelector
+Whitespace
 Unknown
 NewLine
 Punctuation

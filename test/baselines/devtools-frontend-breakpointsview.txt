@@ -752,7 +752,7 @@ NewLine
 NewLine
 CssSelector
 Whitespace
-CssSelector
+Punctuation
 Whitespace
 CssSelector
 Whitespace
@@ -771,7 +771,7 @@ NewLine
 NewLine
 CssSelector
 Whitespace
-CssSelector
+Punctuation
 Whitespace
 CssSelector
 Whitespace
@@ -1311,7 +1311,7 @@ NewLine
 CssSelector
 CssPseudoSelector
 Whitespace
-CssSelector
+Punctuation
 Whitespace
 CssSelector
 Whitespace

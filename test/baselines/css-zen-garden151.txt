@@ -947,6 +947,8 @@ NewLine
 Punctuation
 NewLine
 CssSelector
+Punctuation
+CssSelector
 Whitespace
 CssSelectorClass
 Punctuation

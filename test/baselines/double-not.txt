@@ -2,7 +2,7 @@ CssPseudoSelector
 Punctuation
 CssSelector
 Punctuation
-Unknown
+Punctuation
 Punctuation
 NewLine
 Whitespace

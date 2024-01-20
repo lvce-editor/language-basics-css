@@ -2,7 +2,7 @@ CssSelector
 Punctuation
 CssSelector
 Punctuation
-CssSelector
+Punctuation
 CssSelectorClass
 Punctuation
 CssPropertyName

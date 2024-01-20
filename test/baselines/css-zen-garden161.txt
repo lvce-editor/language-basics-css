@@ -512,9 +512,12 @@ Punctuation
 NewLine
 Whitespace
 CssSelector
-Unknown
+Punctuation
+Whitespace
+CssSelector
+Punctuation
 NewLine
-Unknown
+Punctuation
 NewLine
 NewLine
 CssSelector

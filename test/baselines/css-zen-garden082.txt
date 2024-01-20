@@ -451,9 +451,11 @@ Punctuation
 NewLine
 Whitespace
 CssSelector
-Unknown
+Punctuation
+CssSelector
+Punctuation
 NewLine
-Unknown
+Punctuation
 NewLine
 CssSelectorClass
 Whitespace

@@ -3,7 +3,7 @@ Whitespace
 CssSelector
 Punctuation
 CssSelector
-CssSelector
+Punctuation
 CssSelector
 Punctuation
 CssSelector

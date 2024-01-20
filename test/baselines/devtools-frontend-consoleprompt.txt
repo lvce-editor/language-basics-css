@@ -210,7 +210,7 @@ NewLine
 CssSelectorClass
 CssPseudoSelector
 Whitespace
-CssSelector
+Punctuation
 Whitespace
 CssSelectorClass
 Whitespace

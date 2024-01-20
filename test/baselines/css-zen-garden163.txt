@@ -992,10 +992,15 @@ Unknown
 NewLine
 Whitespace
 CssSelector
-Unknown
+Punctuation
+Whitespace
+CssSelector
+Punctuation
 NewLine
 Whitespace
 CssSelector
+Punctuation
+Whitespace
 Unknown
 Unknown
 NewLine
