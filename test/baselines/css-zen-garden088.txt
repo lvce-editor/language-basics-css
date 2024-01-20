@@ -1081,7 +1081,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
-CssSelector
+Numeric
 Punctuation
 Whitespace
 Punctuation
@@ -1125,7 +1125,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
-CssSelector
+Numeric
 Punctuation
 Whitespace
 Punctuation
@@ -1674,7 +1674,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
-CssSelector
+Numeric
 Punctuation
 Punctuation
 Whitespace
@@ -1683,7 +1683,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
-CssSelector
+Numeric
 Punctuation
 Punctuation
 Whitespace
@@ -1692,7 +1692,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
-CssSelector
+Numeric
 Punctuation
 Punctuation
 Whitespace
@@ -1701,7 +1701,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
-CssSelector
+Numeric
 Punctuation
 Whitespace
 Punctuation
@@ -1745,7 +1745,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
-CssSelector
+Numeric
 Punctuation
 Punctuation
 Whitespace
@@ -1758,7 +1758,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
-CssSelector
+Numeric
 Punctuation
 Punctuation
 NewLine
@@ -1772,7 +1772,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
-CssSelector
+Numeric
 Punctuation
 Punctuation
 Whitespace
@@ -1785,7 +1785,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
-CssSelector
+Numeric
 Punctuation
 Whitespace
 Punctuation

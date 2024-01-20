@@ -1200,7 +1200,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
-CssSelector
+Numeric
 Punctuation
 Whitespace
 Punctuation
@@ -1268,7 +1268,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
-CssSelector
+Numeric
 Punctuation
 Whitespace
 CssSelector
@@ -1316,7 +1316,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
-CssSelector
+Numeric
 Punctuation
 Whitespace
 CssSelector

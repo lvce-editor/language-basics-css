@@ -921,7 +921,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
-CssSelector
+Numeric
 Punctuation
 Whitespace
 Punctuation

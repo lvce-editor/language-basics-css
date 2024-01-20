@@ -462,7 +462,10 @@ export const tokenizeLine = (line, lineState) => {
         }
         break
       case State.InsidePseudoSelector:
-        if ((next = part.match(RE_PSEUDO_SELECTOR_CONTENT))) {
+        if ((next = part.match(RE_NUMERIC))) {
+          token = TokenType.Numeric
+          state = State.InsidePseudoSelector
+        } else if ((next = part.match(RE_PSEUDO_SELECTOR_CONTENT))) {
           token = TokenType.CssSelector
           state = State.InsidePseudoSelector
         } else if ((next = part.match(RE_ROUND_CLOSE))) {
