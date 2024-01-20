@@ -5,6 +5,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
+Numeric
 CssSelector
 Punctuation
 Unknown
@@ -30,6 +31,7 @@ Whitespace
 CssSelector
 CssPseudoSelector
 Punctuation
+Numeric
 CssSelector
 Punctuation
 Unknown

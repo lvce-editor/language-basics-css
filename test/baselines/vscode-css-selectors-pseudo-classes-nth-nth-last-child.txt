@@ -1,5 +1,6 @@
 CssPseudoSelector
 Punctuation
+Numeric
 CssSelector
 Punctuation
 NewLine
