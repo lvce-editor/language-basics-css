@@ -1,0 +1,4 @@
+#foo\ bar {
+  --weird\\var: 5px;
+  width: var(--weird\\var);
+}
