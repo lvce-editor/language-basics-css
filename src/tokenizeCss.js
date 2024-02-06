@@ -128,7 +128,7 @@ const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"]+/
 const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^']+/
 const RE_SINGLE_QUOTE = /^'/
 const RE_ANYTHING_BUT_CURLY = /^[^\{\}]+/s
-const RE_PUNCTUATION = /^[\.:\(\)\+]/
+const RE_PUNCTUATION = /^[\.:\(\)\+\&]/
 const RE_VERTICAL_LINE = /^\|/
 const RE_SLASH = /^\//
 
@@ -398,7 +398,10 @@ export const tokenizeLine = (line, lineState) => {
         }
         break
       case State.AfterPropertyName:
-        if ((next = part.match(RE_COLON))) {
+        if ((next = part.match(RE_WHITESPACE))) {
+          token = TokenType.Whitespace
+          state = State.AfterPropertyName
+        } else if ((next = part.match(RE_COLON))) {
           token = TokenType.CssPropertyColon
           state = State.AfterPropertyNameAfterColon
         } else if ((next = part.match(RE_CURLY_CLOSE))) {
@@ -413,6 +416,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_PROPERTY_NAME))) {
           token = TokenType.CssPropertyName
           state = State.AfterPropertyName
+        } else if ((next = part.match(RE_PUNCTUATION))) {
+          token = TokenType.Punctuation
+          state = State.InsideSelector
         } else if ((next = part.match(RE_ANYTHING_UNTIL_CLOSE_BRACE))) {
           token = TokenType.Unknown
           state = State.InsideSelector
