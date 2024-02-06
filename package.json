@@ -25,7 +25,6 @@
   },
   "test-tokenize": {
     "skip": [
-      "vscode-css-comments-inside-import-statements-1",
       "vscode-css-comments-inside-import-statements-2",
       "vscode-css-selectors-at-rules-import-import-statements-3",
       "vscode-css-selectors-at-rules-import-import-statements-4",
