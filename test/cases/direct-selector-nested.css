@@ -1,0 +1,5 @@
+section {
+  > div {
+    padding: 2px;
+  }
+}
