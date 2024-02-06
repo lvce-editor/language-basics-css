@@ -638,6 +638,13 @@ export const tokenizeLine = (line, lineState) => {
           stack.push(state)
           token = TokenType.FuntionName
           state = State.AfterFunctionName
+        } else if ((next = part.match(RE_BLOCK_COMMENT_START))) {
+          stack.push(state)
+          token = TokenType.Comment
+          state = State.InsideBlockComment
+        } else if ((next = part.match(RE_ANYTHING))) {
+          token = TokenType.Unknown
+          state = State.TopLevelContent
         } else {
           part
           throw new Error('no')
