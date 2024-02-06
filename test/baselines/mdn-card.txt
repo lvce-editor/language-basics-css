@@ -11,7 +11,13 @@ Whitespace
 Punctuation
 CssPropertyName
 Whitespace
-Unknown
+Punctuation
+Whitespace
+Punctuation
+Whitespace
+Punctuation
+Whitespace
+Punctuation
 NewLine
 Whitespace
 Comment
