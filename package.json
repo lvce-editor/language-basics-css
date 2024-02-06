@@ -22,13 +22,5 @@
   "prettier": {
     "semi": false,
     "singleQuote": true
-  },
-  "test-tokenize": {
-    "skip": [
-      "vscode-css-comments-inside-import-statements-2",
-      "vscode-css-selectors-at-rules-import-import-statements-3",
-      "vscode-css-selectors-at-rules-import-import-statements-4",
-      "vscode-css-selectors-at-rules-import-matches-a-url-that-starts-on-the-next-line"
-    ]
   }
 }
