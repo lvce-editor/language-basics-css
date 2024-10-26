@@ -602,6 +602,10 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.Punctuation
           state = State.InsideSingleQuoteString
           stack.push(State.AfterFunctionName)
+        } else if ((next = part.match(RE_BLOCK_COMMENT_START))) {
+          token = TokenType.Comment
+          stack.push(state)
+          state = State.InsideBlockComment
         } else if ((next = part.match(RE_PROPERTY_VALUE_INSIDE_FUNCTION))) {
           token = TokenType.CssPropertyValue
           state = State.AfterFunctionName
