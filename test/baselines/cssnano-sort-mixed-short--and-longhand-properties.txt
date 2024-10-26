@@ -12,7 +12,4 @@ CssPropertyName
 Punctuation
 Numeric
 Punctuation
-CssPropertyName
-Punctuation
-Numeric
-Punctuation
+Unknown
