@@ -1,5 +1,7 @@
 CssSelector
+Whitespace
 Punctuation
+NewLine
 Whitespace
 CssPropertyName
 Punctuation
@@ -24,4 +26,5 @@ Comment
 Comment
 Numeric
 Punctuation
+NewLine
 Punctuation
