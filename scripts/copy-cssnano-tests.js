@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 
 const REPO = 'https://github.com/cssnano/cssnano'
-const COMMIT = '90e9a2ec4c4e73f1be70f4ff059edb3d598eea63'
+const COMMIT = '60a9afa12e293f1a4cb1704e4ca07beb191b0dfa'
 
 const getTestName = (line) => {
   return (
