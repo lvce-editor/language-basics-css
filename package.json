@@ -13,9 +13,9 @@
   "license": "MIT",
   "devDependencies": {
     "@lvce-editor/package-extension": "^1.2.0",
-    "@lvce-editor/server": "^0.40.0",
+    "@lvce-editor/server": "^0.40.5",
     "@lvce-editor/test-syntax-highlighting": "^1.2.0",
-    "execa": "^9.5.1",
+    "execa": "^9.5.2",
     "prettier": "^3.4.2",
     "typescript": "^5.7.2"
   },
