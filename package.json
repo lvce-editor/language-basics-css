@@ -13,10 +13,10 @@
   "license": "MIT",
   "devDependencies": {
     "@lvce-editor/package-extension": "^1.5.0",
-    "@lvce-editor/server": "^0.46.4",
+    "@lvce-editor/server": "^0.46.6",
     "@lvce-editor/test-syntax-highlighting": "^1.2.0",
     "execa": "^9.5.2",
-    "prettier": "^3.5.2",
+    "prettier": "^3.5.3",
     "typescript": "^5.8.2"
   },
   "prettier": {
