@@ -1,15 +1,13 @@
 {
   "name": "builtin.language-basics-css",
   "version": "0.0.0-dev",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "test-syntax-highlighting",
     "dev": "node ./node_modules/@lvce-editor/server/bin/server.js ./test/cases --only-extension=."
   },
-  "keywords": [],
-  "author": "",
+  "author": "Lvce Editor",
   "license": "MIT",
   "devDependencies": {
     "@lvce-editor/package-extension": "^1.6.0",
