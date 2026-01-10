@@ -4,9 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "test-syntax-highlighting",
     "dev": "node ./node_modules/@lvce-editor/server/bin/server.js ./test/cases --only-extension=.",
-    "lint": "eslint . && prettier --check ."
+    "lint": "eslint . && prettier --check .",
+    "test": "test-syntax-highlighting"
   },
   "author": "Lvce Editor",
   "license": "MIT",
