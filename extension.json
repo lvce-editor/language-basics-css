@@ -5,9 +5,12 @@
   "languages": [
     {
       "id": "css",
-      "extensions": [".css"],
+      "extensions": [
+        ".css"
+      ],
       "tokenize": "src/tokenizeCss.js",
       "configuration": "languageConfiguration.json"
     }
-  ]
+  ],
+  "repository": "https://github.com/lvce-editor/language-basics-css"
 }
