@@ -11,14 +11,14 @@
   "author": "Lvce Editor",
   "license": "MIT",
   "devDependencies": {
-    "@lvce-editor/eslint-config": "^5.0.0",
+    "@lvce-editor/eslint-config": "^10.2.0",
     "@lvce-editor/package-extension": "^3.2.0",
-    "@lvce-editor/server": "^0.70.20",
+    "@lvce-editor/server": "^0.81.4",
     "@lvce-editor/test-syntax-highlighting": "^1.3.0",
-    "eslint": "^9.39.2",
+    "eslint": "^10.4.0",
     "execa": "^9.6.1",
-    "prettier": "^3.8.0",
-    "typescript": "^5.9.3"
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3"
   },
   "prettier": {
     "semi": false,
