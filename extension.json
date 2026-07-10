@@ -5,9 +5,7 @@
   "languages": [
     {
       "id": "css",
-      "extensions": [
-        ".css"
-      ],
+      "extensions": [".css"],
       "tokenize": "src/tokenizeCss.js",
       "configuration": "languageConfiguration.json"
     }
